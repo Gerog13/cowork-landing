@@ -5,7 +5,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        darkBlue: '#212529',
+        neonBlue: '#5D73F0',
+        platinum: '#E6E6E6',
+        yellowMunsell: '#EBC909',
+        oldGold: '#CFB004',
       }
     },
   },
