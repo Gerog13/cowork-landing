@@ -10,22 +10,5 @@ module.exports = {
       },
     },
   },
-  daisyui: {
-    themes: [
-      {
-        workbox: {
-          primary: "#5d73f0",
-          secondary: "#ebc909",
-          accent: "#fcd34d",
-          neutral: "#cfb004",
-          "base-100": "#e6e6e6",
-          info: "#3458EA",
-          success: "#108e73",
-          warning: "#efda71",
-          error: "#ef4e66",
-        },
-      },
-    ],
-  },
   plugins: [require("daisyui")],
 };
