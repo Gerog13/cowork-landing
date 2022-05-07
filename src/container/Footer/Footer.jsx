@@ -4,6 +4,7 @@ import logo from "../../assets/images/logo.png";
 
 const Footer = () => {
   return (
+    // <s></s>
     // <footer class="footer p-10 bg-neonBlue">
     //   <div>
     //     <img src={logo} alt="Workbox espacios de trabajo" height={120} width={120} />
