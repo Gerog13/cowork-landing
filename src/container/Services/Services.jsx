@@ -27,141 +27,127 @@ import {
   printerSvg,
 } from "../../assets/services";
 
-import ReactCardFlip from "react-card-flip";
+// import ReactCardFlip from "react-card-flip";
 
-const ServiceCard = ({ bg, svg, title, description }) => {
-  const [isFlipped, setIsFlipped] = useState(false);
-  return (
-    <ReactCardFlip
-      isFlipped={isFlipped}
-      flipDirection="horizontal"
-      flipSpeedBackToFront={0.6}
-      flipSpeedFrontToBack={0.6}
-    >
-      <div
-        onMouseEnter={() => setIsFlipped((prevState) => !prevState)}
-        onMouseLeave={() => setIsFlipped((prevState) => !prevState)}
-        className="card w-72 h-64 bg-base-100 shadow-xl image-full"
-      >
-        <figure>
-          <img src={bg} alt={title} />
-        </figure>
-        <div className="card-body h-full items-center justify-center">
-          <h2 className="text-3xl text-center text-white font-bold uppercase">
-            {title}
-          </h2>
-        </div>
-      </div>
-      <div
-        onMouseEnter={() => setIsFlipped((prevState) => !prevState)}
-        onMouseLeave={() => setIsFlipped((prevState) => !prevState)}
-        className="card items-center p-8 w-72 h-64 bg-base-200 shadow-xl"
-      >
-        <img src={svg} alt="chairsvg" width={80} height={80} />
-        <p className="text-md font-semibold text-center text-black mt-8">
-          {description}
-        </p>
-      </div>
-    </ReactCardFlip>
-  );
-};
-
-// const Service = ({ img, title, description }) => {
+// const ServiceCard = ({ bg, svg, title, description }) => {
+//   const [isFlipped, setIsFlipped] = useState(false);
 //   return (
-//     <div className="card w-72 h-64 bg-base-100 shadow-xl image-full">
-//       <figure>
-//         <img src={img} alt={title} />
-//       </figure>
-//       <div className="card-body h-full items-center justify-center">
-//         <h2 className="text-3xl text-white font-bold uppercase mt-8">
-//           {title}
-//         </h2>
-//         <p className="text-lg text-center text-gray-200 mt-4">{description}</p>
+//     <ReactCardFlip
+//       isFlipped={isFlipped}
+//       flipDirection="horizontal"
+//       flipSpeedBackToFront={0.6}
+//       flipSpeedFrontToBack={0.6}
+//     >
+//       <div
+//         onMouseEnter={() => setIsFlipped((prevState) => !prevState)}
+//         onMouseLeave={() => setIsFlipped((prevState) => !prevState)}
+//         className="card w-72 h-64 shadow-xl image-full"
+//       >
+//         <figure>
+//           <img src={bg} alt={title} loading="lazy" />
+//         </figure>
+//         <div className="card-body h-full items-center justify-center">
+//           <h2 className="text-3xl text-center text-white font-bold uppercase">
+//             {title}
+//           </h2>
+//         </div>
 //       </div>
-//     </div>
+//       <div
+//         onMouseEnter={() => setIsFlipped((prevState) => !prevState)}
+//         onMouseLeave={() => setIsFlipped((prevState) => !prevState)}
+//         className="card items-center p-8 w-72 h-64 bg-gray-300 shadow-xl"
+//       >
+//         <img src={svg} alt={title} width={80} height={80} loading="lazy" />
+//         <p className="text-md font-semibold text-center text-black mt-8">
+//           {description}
+//         </p>
+//       </div>
+//     </ReactCardFlip>
 //   );
 // };
+
+const Card = ({ svg, title, description }) => {
+  return (
+    <div className="card items-center p-8 w-full sm:w-4/5 md:w-72 md:h-72 bg-gray-300 shadow-xl">
+      <h2 className="mb-2 font-bold text-black text-xl">{title}</h2>
+      <img src={svg} alt={title} width={80} height={80} loading="lazy" />
+      <p className="text-md font-semibold text-center text-black mt-8">
+        {description}
+      </p>
+    </div>
+  );
+};
 
 const Services = () => {
   return (
     <section
       id="servicios"
-      className="min-h-screen bg-base-100 flex justify-center items-center"
+      className=" md:min-h-screen bg-white flex justify-center items-center"
     >
-      <div className="w-full flex flex-col items-center">
-        <h1 className="text-5xl font-extrabold">Nuestros Servicios</h1>
-        <div className="px-10 flex flex-wrap mt-14 w-full justify-around gap-4">
-          <ServiceCard
-            bg={wifi}
+      <div className="w-full flex flex-col py-10 md:py-20 items-center">
+        <h1 className="text-3xl md:text-5xl text-neonBlue font-extrabold md:-mt-10">
+          Nuestros Servicios
+        </h1>
+        <div className="px-6 md:px-10 flex flex-wrap mt-6 md:mt-14 w-full justify-around gap-4">
+          <Card
             svg={wifiSvg}
             title="Wifi"
             description="Con nuestro wifi de alta velocidad, navega y trabaja sin limitaciones ni interrupciones"
           />
-          <ServiceCard
-            bg={lockers}
+          <Card
             svg={lockersSvg}
             title="Lockers"
             description="Nuestros lockers te van a permitir guardar tus objetos de valor de forma segura"
           />
-          <ServiceCard
-            bg={camera}
+          <Card
             svg={cameraSvg}
             title="Monitoreo"
             description="Para nosotros, tu seguridad y la de tus equipos es la más importante"
           />
-          <ServiceCard
-            bg={furniture}
+          <Card
             svg={furnitureSvg}
             title="Mobiliario"
             description="Sentite cómodo en todo momento con nuestros muebles ergónomicos de alta calidad"
           />
-          <ServiceCard
-            bg={meetingRoom}
+          <Card
             svg={meetingRoomSvg}
             title="Sala de Reunión"
             description="Tene reuniones con tu equipo de forma privada y hace crecer tu empresa/emprendimiento"
           />
-          <ServiceCard
-            bg={office}
+          <Card
             svg={officeSvg}
             title="Oficinas Privadas"
             description="Tene tu espacio que te permita atender clientes o trabajar cómodamente"
           />
-          <ServiceCard
-            bg={clock}
+          <Card
             svg={clockSvg}
             title="Horario"
-            description="Con nuestro wifi de alta velocidad, navega y trabaja sin limitaciones ni interrupciones"
+            description="Con nuestro wifi de alta velocidad, navegá y trabaja sin limitaciones ni interrupciones"
           />
-          <ServiceCard
-            bg={benefits}
+          <Card
             svg={benefitsSvg}
             title="Eventos"
-            description="Nuestros lockers te van a permitir guardar tus objetos de valor de forma segura"
+            description="La diversión y los afters van a estar asegurados en Workbox"
           />
-          <ServiceCard
-            bg={coffee}
+          <Card
             svg={coffeeSvg}
             title="Coffe Break"
-            description="Para nosotros, tu seguridad y la de tus equipos es la más importante"
+            description="Un cafe para acompañar el trabajo es algo sumamente esencial"
           />
-          <ServiceCard
-            bg={mail}
+          <Card
             svg={mailSvg}
             title="Dirección"
-            description="Sentite cómodo en todo momento con nuestros muebles ergónomicos de alta calidad"
+            description="¿Querés enviar tu correspondencia al cowork? Tranquilo, nosotros la recibimos!"
           />
-          <ServiceCard
-            bg={bike}
+          <Card
             svg={bikeSvg}
             title="Bike Parking"
-            description="Tene reuniones con tu equipo de forma privada y hace crecer tu empresa/emprendimiento"
+            description="Aparca tu bici de manera segura"
           />
-          <ServiceCard
-            bg={printer}
+          <Card
             svg={printerSvg}
             title="Servicio de impresión"
-            description="Tene tu espacio que te permita atender clientes o trabajar cómodamente"
+            description="Siempre habra una impresora a tu disposición para que puedas escanear, imprimir y digitalizar tus documentos"
           />
         </div>
       </div>
@@ -171,35 +157,3 @@ const Services = () => {
 
 export default Services;
 
-{
-  /* <Service
-            img={wifi}
-            title="Wifi"
-            description="Con nuestro wifi de alta velocidad, navega y trabaja sin limitaciones ni interrupciones"
-          />
-          <Service
-            img={lockers}
-            title="Lockers"
-            description="Guarda tus objetos de manera segura"
-          />
-          <Service
-            img={camera}
-            title="Cámaras"
-            description="Sistema de vigilancia las 24hs"
-          />
-          <Service
-            img={office}
-            title="Oficinas privadas"
-            description="Con nuestro wifi de alta velocidad, navega y trabaja sin limitaciones ni interrupciones"
-          />
-          <Service
-            img={meetingRoom}
-            title="Sala de reuniones"
-            description="Con nuestro wifi de alta velocidad, navega y trabaja sin limitaciones ni interrupciones"
-          />
-          <Service
-            img={furniture}
-            title="Mobiliario"
-            description="Con nuestro wifi de alta velocidad, navega y trabaja sin limitaciones ni interrupciones"
-          /> */
-}
