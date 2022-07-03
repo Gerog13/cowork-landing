@@ -39,33 +39,30 @@ const Button = () => {
 const Plans = () => {
   return (
     <section
-      className="w-full lg:py-80 py-10 bg-platinum flex flex-col md:flex-row items-center md:justify-center"
+      className="w-full lg:py-60 py-20 bg-platinum flex flex-col md:flex-row items-center md:justify-center"
       id="planes"
     >
-      <div className="flex flex-col h-full w-4/5 md:w-3/5 lg:w-4/5 items-center justify-center lg:flex-row">
+      <div className="flex flex-col h-full w-4/5 md:w-3/5 lg:w-full lg:px-20 xl:px-40 2xl:w-4/5 items-center justify-center lg:flex-row">
         <div>
-          <h2 className="text-6xl md:text-7xl xl:text-9xl text-neonBlue font-semibold">
+          <h2 className="text-6xl md:text-7xl text-oldGold font-semibold">
             Planes
           </h2>
-          <p className="text-xl md:text-3xl xl:text-4xl font-light text-gray-800">
+          <p className="text-xl md:text-3xl font-light text-black">
             Con nuestros planes vas a poder disfrutar de todas las comodidades
             que ofrece Workbox y mucho más.
           </p>
         </div>
-        <div
-          className="divider bg-neonBlue w-full h-1 lg:w-1 lg:divider-horizontal"
-          // style={{ width: "2px" }}
-        ></div>
+        <div className="divider bg-neonBlue w-full h-1 lg:w-1 lg:divider-horizontal"></div>
         <div className="w-full">
           <div className="collapse w-full">
             <input type="checkbox" className="peer" />
-            <div className="flex items-center collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+            <div className="flex items-center collapse-title bg-primary text-primary-content peer-checked:bg-oldGold peer-checked:text-black">
               <img src={dots} alt="" />
-              <h3 className="text-lg font-medium">Pase por el día</h3>
+              <h3 className="text-lg 2xl:text-xl font-medium">Pase por el día</h3>
             </div>
-            <div className="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+            <div className="collapse-content bg-primary text-primary-content peer-checked:bg-oldGold peer-checked:text-white">
               <div className="flex flex-col sm:px-4">
-                <p>Que ofrecemos:</p>
+                <p className="text-lg font-medium">Que ofrecemos:</p>
                 <ul className="pl-8 py-2 list-decimal">
                   <li className="">Item 1</li>
                   <li className="">Item 2</li>
@@ -73,29 +70,39 @@ const Plans = () => {
                   <li className="">Item 4</li>
                   <li className="">Item 5</li>
                 </ul>
-                <div className="flex w-full justify-between xl:justify-around">
-                  <div>
-                    <div className="text-sm sm:text-md  opacity-60 whitespace-nowrap">
-                      Precio con IVA incluido
-                    </div>
-                    <div className="text-xl sm:text-2xl md:text-4xl leading-9 font-extrabold whitespace-nowrap">
+                <div className="flex w-full flex-col justify-between xl:justify-around">
+                  <div className="text-sm sm:text-md 2xl:text-lg opacity-80 text-black font-semibold whitespace-nowrap">
+                    Precio con IVA incluido
+                  </div>
+                  <div className="flex w-full items-center justify-between mt-2">
+                    <div className="text-xl sm:text-3xl xl:text-4xl leading-9 font-extrabold whitespace-nowrap">
                       $89,400
                     </div>
+                    <Link
+                      to="contacto"
+                      spy={true}
+                      smooth={true}
+                      duration={100}
+                      className=""
+                    >
+                      <button className="btn btn-primary btn-sm sm:px-8 xl:btn-md xl:px-10">
+                        Reservar
+                      </button>
+                    </Link>
                   </div>
-                  <button className="btn btn-success btn-sm sm:px-8 self-end mb-2 md:mb-0">Reservar</button>
                 </div>
               </div>
             </div>
           </div>
           <div className="collapse w-full">
             <input type="checkbox" className="peer" />
-            <div className="flex items-center collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+            <div className="flex items-center collapse-title bg-primary text-primary-content peer-checked:bg-oldGold peer-checked:text-black">
               <img src={dots} alt="" />
-              <h3 className="text-lg font-medium">Espacio compartido</h3>
+              <h3 className="text-lg 2xl:text-xl font-medium">Espacio compartido</h3>
             </div>
-            <div className="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+            <div className="collapse-content bg-primary text-primary-content peer-checked:bg-oldGold peer-checked:text-white">
               <div className="flex flex-col sm:px-4">
-                <p>Que ofrecemos:</p>
+                <p className="text-lg font-medium">Que ofrecemos:</p>
                 <ul className="pl-8 py-2 list-decimal">
                   <li className="">Item 1</li>
                   <li className="">Item 2</li>
@@ -103,29 +110,39 @@ const Plans = () => {
                   <li className="">Item 4</li>
                   <li className="">Item 5</li>
                 </ul>
-                <div className="flex w-full justify-between xl:justify-around">
-                  <div>
-                  <div className="text-sm sm:text-md  opacity-60 whitespace-nowrap">
-                      Precio con IVA incluido
-                    </div>
-                    <div className="text-xl sm:text-2xl md:text-4xl leading-9 font-extrabold whitespace-nowrap">
+                <div className="flex w-full flex-col justify-between xl:justify-around">
+                  <div className="text-sm sm:text-md 2xl:text-lg opacity-80 text-black font-semibold whitespace-nowrap">
+                    Precio con IVA incluido
+                  </div>
+                  <div className="flex w-full items-center justify-between mt-2">
+                    <div className="text-xl sm:text-3xl xl:text-4xl leading-9 font-extrabold whitespace-nowrap">
                       $89,400
                     </div>
+                    <Link
+                      to="contacto"
+                      spy={true}
+                      smooth={true}
+                      duration={100}
+                      className=""
+                    >
+                      <button className="btn btn-primary btn-sm sm:px-8 xl:btn-md xl:px-10">
+                        Reservar
+                      </button>
+                    </Link>
                   </div>
-                  <button className="btn btn-success btn-sm sm:px-8 self-end mb-2 md:mb-0">Reservar</button>
                 </div>
               </div>
             </div>
           </div>
           <div className="collapse w-full">
             <input type="checkbox" className="peer" />
-            <div className="flex items-center collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+            <div className="flex items-center collapse-title bg-primary text-primary-content peer-checked:bg-oldGold peer-checked:text-black">
               <img src={dots} alt="" />
-              <h3 className="text-lg font-medium">Oficina privada</h3>
+              <h3 className="text-lg 2xl:text-xl font-medium">Oficina privada</h3>
             </div>
-            <div className="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+            <div className="collapse-content bg-primary text-primary-content peer-checked:bg-oldGold peer-checked:text-white">
               <div className="flex flex-col sm:px-4">
-                <p>Que ofrecemos:</p>
+                <p className="text-lg font-medium">Que ofrecemos:</p>
                 <ul className="pl-8 py-2 list-decimal">
                   <li className="">Item 1</li>
                   <li className="">Item 2</li>
@@ -133,29 +150,39 @@ const Plans = () => {
                   <li className="">Item 4</li>
                   <li className="">Item 5</li>
                 </ul>
-                <div className="flex w-full justify-between xl:justify-around">
-                  <div>
-                  <div className="text-sm sm:text-md  opacity-60 whitespace-nowrap">
-                      Precio con IVA incluido
-                    </div>
-                    <div className="text-xl sm:text-2xl md:text-4xl leading-9 font-extrabold whitespace-nowrap">
+                <div className="flex w-full flex-col justify-between xl:justify-around">
+                  <div className="text-sm sm:text-md 2xl:text-lg opacity-80 text-black font-semibold whitespace-nowrap">
+                    Precio con IVA incluido
+                  </div>
+                  <div className="flex w-full items-center justify-between mt-2">
+                    <div className="text-xl sm:text-3xl xl:text-4xl leading-9 font-extrabold whitespace-nowrap">
                       $89,400
                     </div>
+                    <Link
+                      to="contacto"
+                      spy={true}
+                      smooth={true}
+                      duration={100}
+                      className=""
+                    >
+                      <button className="btn btn-primary btn-sm sm:px-8 xl:btn-md xl:px-10">
+                        Reservar
+                      </button>
+                    </Link>
                   </div>
-                  <button className="btn btn-success btn-sm sm:px-8 self-end mb-2 md:mb-0">Reservar</button>
                 </div>
               </div>
             </div>
           </div>
           <div className="collapse w-full">
             <input type="checkbox" className="peer" />
-            <div className="flex items-center collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+            <div className="flex items-center collapse-title bg-primary text-primary-content peer-checked:bg-oldGold peer-checked:text-black">
               <img src={dots} alt="" />
-              <h3 className="text-lg font-medium">Sala de reuniones</h3>
+              <h3 className="text-lg 2xl:text-xl font-medium">Sala de reuniones</h3>
             </div>
-            <div className="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+            <div className="collapse-content bg-primary text-primary-content peer-checked:bg-oldGold peer-checked:text-white">
               <div className="flex flex-col sm:px-4">
-                <p>Que ofrecemos:</p>
+                <p className="text-lg font-medium">Que ofrecemos:</p>
                 <ul className="pl-8 py-2 list-decimal">
                   <li className="">Item 1</li>
                   <li className="">Item 2</li>
@@ -163,16 +190,26 @@ const Plans = () => {
                   <li className="">Item 4</li>
                   <li className="">Item 5</li>
                 </ul>
-                <div className="flex w-full justify-between xl:justify-around">
-                  <div>
-                  <div className="text-sm sm:text-md  opacity-60 whitespace-nowrap">
-                      Precio con IVA incluido
-                    </div>
-                    <div className="text-xl sm:text-2xl md:text-4xl leading-9 font-extrabold whitespace-nowrap">
+                <div className="flex w-full flex-col justify-between xl:justify-around">
+                  <div className="text-sm sm:text-md 2xl:text-lg opacity-80 text-black font-semibold whitespace-nowrap">
+                    Precio con IVA incluido
+                  </div>
+                  <div className="flex w-full items-center justify-between mt-2">
+                    <div className="text-xl sm:text-3xl xl:text-4xl leading-9 font-extrabold whitespace-nowrap">
                       $89,400
                     </div>
+                    <Link
+                      to="contacto"
+                      spy={true}
+                      smooth={true}
+                      duration={100}
+                      className=""
+                    >
+                      <button className="btn btn-primary btn-sm sm:px-8 xl:btn-md xl:px-10">
+                        Reservar
+                      </button>
+                    </Link>
                   </div>
-                  <button className="btn btn-success btn-sm sm:px-8 self-end mb-2 md:mb-0">Reservar</button>
                 </div>
               </div>
             </div>

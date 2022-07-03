@@ -54,18 +54,6 @@
     transition: .5s ease;
     cursor: pointer;
 }
-/* 
-.app__gallery-images_card img {
-    max-width: 500px;
-    height: 400px;
-    object-fit: cover;
-    opacity: 1;
-    transition: .5s ease;
-} */
-
-/* .app__gallery-images_card:hover img {
-    opacity: .35;
-}  */
 
 .app__gallery-images_card:hover .gallery__image-icon {
     opacity: 1;
@@ -113,7 +101,7 @@
 
     .app__gallery-images {
         max-width: 100%;
-        margin: 5rem 0;
+        margin: 2rem 0;
     }
 }
 
@@ -133,7 +121,6 @@
     }
 
     .app__gallery-images_card {
-        min-width: 240px;
-        height: 320px;
+        min-width: 280px;
     }
 }

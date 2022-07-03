@@ -7,19 +7,14 @@ export default function App() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
   const [isEmailSent, setIsEmailSent] = useState(false);
-  const onSubmit = (event, data) => {
-    console.log(data);
-    sendEmail(event);
-  };
-
   const form = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  const sendEmail = (data) => {
     setIsEmailSent(true);
     emailjs
       .sendForm(
@@ -31,7 +26,6 @@ export default function App() {
       .then(
         (result) => {
           console.log(result.text);
-
           setTimeout(() => {
             setIsEmailSent(false);
           }, 1500);
@@ -40,7 +34,7 @@ export default function App() {
           console.log(error.text);
         }
       );
-    e.target.reset();
+    reset();
   };
 
   return (
@@ -48,18 +42,19 @@ export default function App() {
       id="contacto"
       className="w-full py-10 xl:h-screen flex flex-col items-center bg-white"
     >
-      <h1 className="text-3xl md:text-5xl text-neonBlue mt-14 font-extrabold">
+      <h1 className="text-3xl md:text-5xl text-black mt-14 font-extrabold">
         Se parte de Workbox
       </h1>
-      <div className="px-4 md:px-0 h-full w-full flex justify-around items-center xl:-mt-20">
+      <div className="px-4 md:px-0 h-full w-full flex justify-around items-center ">
         <form
           ref={form}
-          className="w-full sm:w-4/5 md:w-1/2 lg:w-2/5 h-3/5 flex items-start justify-around flex-col my-10 p-10 bg-neonBlue shadow-xl rounded-lg text-white"
-          onSubmit={handleSubmit(onSubmit)}
+          className="w-full sm:w-4/5 md:w-1/2 lg:w-2/5  flex items-start justify-around flex-col my-10 p-10 bg-gray-900 shadow-xl rounded-lg text-white"
+          onSubmit={handleSubmit(sendEmail)}
         >
           <h2 className="self-center text-4xl font-bold mb-3">
             Reserva tu Lugar
           </h2>
+          {/* Name */}
           <label className="label font-light text-xl text-white" htmlFor="name">
             Nombre Completo
           </label>
@@ -68,8 +63,11 @@ export default function App() {
             {...register("name", { required: true })}
           />
           {errors.name && (
-            <span className="text-md font-medium mt-3 text-black">Campo requerido</span>
+            <span className="text-md font-medium mt-3 text-red-400">
+              Campo requerido
+            </span>
           )}
+          {/* Email */}
           <label
             className="label font-light text-xl text-white"
             htmlFor="email"
@@ -89,8 +87,25 @@ export default function App() {
             type="email"
           />
           {errors.email && (
-            <span className="text-md font-medium mt-3 text-black">Dirección de correo electrónico inválida</span>
+            <span className="text-md font-medium mt-3 text-red-400">
+              Dirección de correo electrónico inválida
+            </span>
           )}
+          {/* Phone */}
+          <label
+            className="label font-light text-xl text-white"
+            htmlFor="phone"
+          >
+            Telefono
+          </label>
+          <input
+            id="phone"
+            name="phone"
+            className="input input-bordered input-primary w-full text-black font-semibold bg-white"
+            {...register("phone")}
+            type="tel"
+          />
+          {/* Message */}
           <label
             className="label font-light text-xl text-white"
             htmlFor="message"

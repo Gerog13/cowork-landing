@@ -35,9 +35,9 @@ const Gallery = () => {
   return (
     <div className="app__gallery flex justify-center items-center bg-gray-900">
       <div className="app__gallery-content">
-        <h1 className="text-5xl text-platinum font-semibold mb-4">Ubicación</h1>
+        <h1 className="text-5xl text-white font-semibold mb-4">Ubicación</h1>
         <a
-          className="text-xl font-extralight text-gray-400"
+          className="text-xl font-normal text-slate-400"
           href="https://g.page/LaBarracaMall?share"
           alt="La barraca mall"
           target="_BLANK"
@@ -45,10 +45,10 @@ const Gallery = () => {
         >
           La Barraca Mall - Dorrego Mendoza, Las Cañas 1833, M5526
         </a>
-        <h3 className="text-2xl text-platinum font-semibold mt-4">
+        <h3 className="text-2xl text-white font-semibold mt-4">
           Nuestros horarios:
         </h3>
-        <p className="text-xl font-extralight text-gray-400">
+        <p className="text-xl font-normal text-slate-400">
           Lunes a Viernes <br />
           8 am - 18 pm
         </p>
@@ -83,7 +83,6 @@ const Gallery = () => {
                 <label
                   className="modal-box p-0 relative overflow-hidden"
                   htmlFor=""
-                  // style={{ height: "70vh", maxWidth: "70vw" }}
                 >
                   <img
                     src={image}
