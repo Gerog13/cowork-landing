@@ -1,28 +1,27 @@
 import React, { useState, useEffect } from "react";
+import Fade from "react-reveal/Fade";
+import Slide from "react-reveal/Slide";
 
 import Logo from "../../assets/images/white-logo.png";
-import food from "../../assets/images/food.svg";
-import cowork from "../../assets/images/coding.svg";
-// import worktime from "../../assets/images/worktime.svg";
-import parking from "../../assets/images/parking.svg";
-import atm from "../../assets/images/atm.svg";
-import highway from "../../assets/images/highway.svg";
-import market from "../../assets/images/market.svg";
-import security from "../../assets/images/security.svg";
+import cowork from "../../assets/images/workspace.png";
+import { FaParking, FaMoneyBillWave } from "react-icons/fa";
+import { AiOutlineSafety } from "react-icons/ai";
+import { GiRoad } from "react-icons/gi";
+import { MdOutlineLocalDining, MdLocalOffer } from "react-icons/md";
 
 import { Link } from "react-scroll";
-import Typical from "react-typical";
 import TextTransition, { presets } from "react-text-transition";
+import { Roll } from "react-reveal";
 
 const Main = () => {
   const [index, setIndex] = useState(0);
   const TEXTS = [
-    "crecer",
-    "trabajar",
-    "conocer",
-    "ayudar",
-    "aprender",
-    "cooperar",
+    "crecer.",
+    "trabajar.",
+    "conocer.",
+    "ayudar.",
+    "aprender.",
+    "cooperar.",
   ];
 
   useEffect(() => {
@@ -36,8 +35,8 @@ const Main = () => {
   return (
     <section>
       {/* Nav */}
-      <nav className="navbar px-1 md:px-10 bg-black">
-        <div className="navbar-start">
+      <nav className="navbar justify-between px-1 pt-4 md:px-10 bg-blackness">
+        <div>
           <div className="dropdown">
             <label tabIndex="0" className="btn btn-ghost lg:hidden">
               <svg
@@ -85,33 +84,33 @@ const Main = () => {
             <img src={Logo} alt="Workbox logo" height={200} width={200} />
           </a>
         </div>
-        <div className="navbar-center w-1/3 md:w-2/5 xl:w-1/3 hidden lg:flex">
-          <ul className="w-full flex justify-around font-semibold text-lg">
-            <li className="tracking-wide text-white text-lg cursor-pointer border-b-2 border-transparent hover:border-oldGold hover:text-oldGold  hover:shadow-xl transition-all ease duration-150">
+        <div className="navbar-center w-1/3 2xl:w-1/4 hidden lg:flex">
+          <ul className="w-full flex justify-between font-normal">
+            <li className="tracking-wide text-white text-lg cursor-pointer border-b-2 border-transparent hover:border-lightGray hover:text-lightGray  hover:shadow-xl transition-all ease duration-150">
               <Link to="servicios" spy={true} smooth={true} duration={100}>
                 Servicios
               </Link>
             </li>
-            <li className="tracking-wide text-white text-lg cursor-pointer border-b-2 border-transparent hover:border-oldGold hover:text-oldGold hover:shadow-xl transition-all ease duration-150">
+            <li className="tracking-wide text-white text-lg cursor-pointer border-b-2 border-transparent hover:border-lightGray hover:text-lightGray hover:shadow-xl transition-all ease duration-150">
               <Link to="planes" spy={true} smooth={true} duration={100}>
                 Planes
               </Link>
             </li>
-            <li className="tracking-wide text-white text-lg cursor-pointer border-b-2 border-transparent hover:border-oldGold hover:text-oldGold hover:shadow-xl transition-all ease duration-150">
+            <li className="tracking-wide text-white text-lg cursor-pointer border-b-2 border-transparent hover:border-lightGray hover:text-lightGray hover:shadow-xl transition-all ease duration-150">
               <Link to="galeria" spy={true} smooth={true} duration={100}>
                 Galería
               </Link>
             </li>
-            <li className="tracking-wide text-white text-lg cursor-pointer border-b-2 border-transparent hover:border-oldGold hover:text-oldGold hover:shadow-xl transition-all ease duration-150">
+            <li className="tracking-wide text-white text-lg cursor-pointer border-b-2 border-transparent hover:border-lightGray hover:text-lightGray hover:shadow-xl transition-all ease duration-150">
               <Link to="contacto" spy={true} smooth={true} duration={100}>
                 Contacto
               </Link>
             </li>
           </ul>
         </div>
-        <div className="navbar-end">
+        <div className="justify-end">
           <Link
-            className="btn btn-sm md:btn-md btn-primary mr-1 sm:mr-4  text-gray-900 bg-oldGold border-oldGold hover:bg-oldGold hover:border-oldGold hover:shadow-xl hover:opacity-90"
+            className="btn btn-sm md:btn-md btn-primary mr-1 sm:mr-4 lg:mr-0 rounded-none text-white bg-lightGray border-lightGray hover:bg-lightGray hover:border-lightGray hover:shadow-xl hover:opacity-90"
             to="contacto"
             spy={true}
             smooth={true}
@@ -123,61 +122,76 @@ const Main = () => {
       </nav>
 
       {/* Main section */}
-      <section className="pt-8 lg:pt-0 md:pb-10 flex flex-col lg:flex-row lg:px-6 xl:px-20 justify-around md:justify-center md:h-screen w-full items-center xl:-mt-20 bg-black">
-        <img
-          src={cowork}
-          alt="Tu espacio de conexion"
-          className=" w-64  md:w-img lg:mr-10"
-        />
-        <div className="md:mb-56 lg:mb-0 xl:ml-10 flex flex-col h-2/5 justify-center md:items-center lg:items-start">
-          <div className="mt-6 md:mt-44 flex flex-col items-center lg:items-start">
-            <h1 className="text-white text-2xl sm:text-5xl xl:text-6xl font-semibold mb-1">
-              Bienvenido a Workbox
+      <section className="w-full h-screen pt-12 bg-blackness">
+        <div className="flex mx-auto justify-between max-w-6xl ">
+          <div className="flex flex-col">
+            <h1 className="text-white text-2xl sm:text-5xl xl:text-9xl font-semibold">
+              <span className="text-7xl font-extralight">Bienvenido a </span>
+              <br />
+              Workbox
             </h1>
-            <div className="flex flex-col items-center sm:flex-row sm:items-start text-lg sm:text-xl md:text-2xl xl:text-3xl text-white font-extralight">
-              Tu espacio de conexión para:
-              <TextTransition
-                className="sm:ml-1 md:ml-2 font-semibold text-oldGold capitalize"
-                springConfig={presets.wobbly}
-              >
-                {TEXTS[index % TEXTS.length]}
-              </TextTransition>
-            </div>
+            <hr className="border mt-10 mb-6 w-1/2 border-grayness" />
+            <Slide left duration={2000}>
+              <div className="flex flex-col items-center mb-6 sm:flex-row sm:items-start text-lg sm:text-xl md:text-2xl text-grayness font-extralight">
+                Tu espacio de conexión para
+                <TextTransition
+                  className="sm:ml-1 md:ml-2 font-semibold text-lightGray"
+                  springConfig={presets.wobbly}
+                >
+                  {TEXTS[index % TEXTS.length]}
+                </TextTransition>
+              </div>
+            </Slide>
+            <Fade left cascade>
+              <div className="grid grid-cols-2 gap-6">
+                <div className="border-b border-r p-2 border-grayness flex items-center">
+                  <FaParking className="fill-white w-10 h-10" />
+                  <p className="break-words ml-2 text-white font-light">
+                    Amplio estacionamiento
+                  </p>
+                </div>
+                <div className="border-b border-r p-2 border-grayness flex items-center">
+                  <FaMoneyBillWave className="fill-white w-10 h-10" />
+                  <p className="break-words ml-2 text-white font-light">
+                    Cajeros cercanos
+                  </p>
+                </div>
+                <div className="border-b border-r p-2 border-grayness flex items-center">
+                  <AiOutlineSafety className="fill-white w-10 h-10" />
+                  <p className="break-words ml-2 text-white font-light">
+                    Seguridad 24/7
+                  </p>
+                </div>
+                <div className="border-b border-r p-2 border-grayness flex items-center">
+                  <GiRoad className="fill-white w-10 h-10" />
+                  <p className="break-words ml-2 text-white font-light">
+                    Fácil acceso
+                  </p>
+                </div>
+                <div className="border-b border-r p-2 border-grayness flex items-center">
+                  <MdOutlineLocalDining className="fill-white w-10 h-10" />
+                  <p className="break-words ml-2 text-white font-light">
+                    Patio de comidas
+                  </p>
+                </div>
+                <div className="border-b border-r p-2 border-grayness flex items-center">
+                  <MdLocalOffer className="fill-white w-10 h-10" />
+                  <p className="break-words ml-2 text-white font-light">
+                    Todo tipo de negocios
+                  </p>
+                </div>
+              </div>
+            </Fade>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-3 w-full gap-6 md:px-6  lg:px-0 mt-4 sm:mt-6 md:mt-10 pb-10 px-4">
-            <div className="cursor-default flex items-center rounded-xl shadow-sm px-6 py-4 bg-white hover:opacity-95 hover:shadow-xl transition-all ease duration-100">
-              <img src={parking} alt="" width={40} height={40} />
-              <p className="break-words ml-2 text-gray-900 font-medium">
-                Gran estacionamiento
-              </p>
+          <Fade bottom duration={2000}>
+            <div className="w-full">
+              <img
+                src={cowork}
+                alt="Tu espacio de conexion"
+                className="w-64 md:w-full h-full object-cover lg:ml-10"
+              />
             </div>
-            <div className="cursor-default flex items-center rounded-xl shadow-sm px-6 py-4 bg-white hover:opacity-95 hover:shadow-xl transition-all ease duration-100">
-              <img src={security} alt="" width={40} height={40} />
-              <p className="ml-2 text-gray-900 font-medium ">Seguridad 24/7</p>
-            </div>
-            <div className="cursor-default flex items-center rounded-xl shadow-sm px-6 py-4 bg-white hover:opacity-95 hover:shadow-xl transition-all ease duration-100">
-              <img src={atm} alt="" width={40} height={40} />
-              <p className="ml-2 text-gray-900 font-medium ">
-                Cajeros cercanos
-              </p>
-            </div>
-            <div className="cursor-default flex items-center rounded-xl shadow-sm px-6 py-4 bg-white hover:opacity-95 hover:shadow-xl transition-all ease duration-100">
-              <img src={highway} alt="" width={40} height={40} />
-              <p className="ml-2 text-gray-900 font-medium ">Fácil acceso</p>
-            </div>
-            <div className="cursor-default	flex items-center rounded-xl shadow-sm px-6 py-4 bg-white hover:opacity-95 hover:shadow-xl transition-all ease duration-100">
-              <img src={market} alt="" width={40} height={40} />
-              <p className="ml-2 text-gray-900 font-medium ">
-                Todo tipo de negocios
-              </p>
-            </div>
-            <div className="cursor-default	flex items-center rounded-xl shadow-sm px-6 py-4 bg-white hover:opacity-95 hover:shadow-xl transition-all ease duration-100">
-              <img src={food} alt="" width={40} height={40} />
-              <p className="ml-2 text-gray-900 font-medium ">
-                Patio de comidas
-              </p>
-            </div>
-          </div>
+          </Fade>
         </div>
       </section>
     </section>

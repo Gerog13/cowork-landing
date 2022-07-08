@@ -11,7 +11,7 @@
     align-items: flex-start;
     flex-direction: column;
     min-width: 500px;
-    padding-right: 2rem;
+    padding-left: 2.5rem;
 }
 
 .app__gallery-content button {
@@ -42,7 +42,7 @@
 .app__gallery-images_card {
     position: relative;
     min-width: 301px;
-    height: 500px;
+    height: 450px;
     margin-right: 2rem;
 }
 
@@ -79,7 +79,7 @@
 }
 
 .gallery__arrow-icon:hover {
-    color: #DE6B48;
+    color: #7986bf;
 }
 
 @media screen and (min-width: 2000px) {

@@ -15,7 +15,7 @@ function App() {
     <div >
       {/* <Navbar />
       <Header />  */}
-      <ScrollToTop component={<img style={{ width: '1.5rem', margin: '0 auto'}} src={arrow} alt="Subir" />}  smooth />
+      <ScrollToTop component={<img style={{ width: '1.5rem', margin: '0 auto', padding: '2px'}} src={arrow} alt="Subir" />}  smooth />
       <Main />
       <Services />
       <Plans />
