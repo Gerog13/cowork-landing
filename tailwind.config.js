@@ -13,6 +13,7 @@ module.exports = {
         platinum: "#e5e5e5",
         yellowMunsell: "#EBC909",
         oldGold: "#fca311",
+        bgGold: '#fff1db',
         sienna: "#DE6B48",
       },
       width: {
