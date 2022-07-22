@@ -1,17 +1,18 @@
 import React from "react";
-import { Footer, Gallery, Services, Header, Contact } from "./container"
-import Navbar from './components/Navbar/Navbar'
+import ScrollToTop from "react-scroll-to-top";
+import arrow from './assets/images/arrow.svg'
+import { Main, Footer, Services, Contact, Plans } from "./container";
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <Header /> 
+    <div >
+      <ScrollToTop component={<img style={{ width: '1.5rem', margin: '0 auto', padding: '2px'}} src={arrow} alt="Subir" />}  smooth />
+      <Main />
       <Services />
-      <Gallery />
+      <Plans />
       <Contact />
       <Footer />
-    </>
+    </div>
   );
 }
 
