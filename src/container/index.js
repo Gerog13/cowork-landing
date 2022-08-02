@@ -1,4 +1,5 @@
 import Main from './Main/Main'
+import Mainui from './Main/Mainui'
 import Gallery from './Gallery/Gallery'
 import Header from './Header/Header'
 import Footer from './Footer/Footer'
@@ -8,6 +9,7 @@ import Plans from './Plans/Plans'
 
 export {
     Main,
+    Mainui,
     Gallery,
     Header,
     Footer,
