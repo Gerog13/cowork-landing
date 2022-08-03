@@ -30,14 +30,14 @@ const Plans = () => {
             <p className="text-lg font-medium text-darkness">Pase por el día</p>
             <h4 className="mt-2 text-4xl font-semibold text-gray-800 opacity-90">
               <span className="text-oldGold">$</span>3.000
-              <span className="text-base font-normal text-gray-400">/ Mes</span>
+              <span className="text-base font-normal text-gray-400">/ Día</span>
             </h4>
-            <p className="mt-4 text-gray-800 font-medium opacity-80 h-16">
+            <p className="mt-4 text-gray-800 font-medium opacity-80 h-20">
               Para aquellas personas que quieren utilizar nuestros servicios en
               el día.
             </p>
 
-            <div className="mt-8 space-y-8">
+            <div className="mt-8 space-y-8 h-[20rem]">
               <div className="flex items-center">
                 <BsFillCheckCircleFill width={10} className="fill-oldGold" />
                 <span className="mx-4 text-gray-800 font-medium">
@@ -94,15 +94,15 @@ const Plans = () => {
               Jornada completa
             </p>
             <h4 className="mt-2 text-4xl font-semibold text-gray-800 opacity-90">
-              <span className="text-oldGold">$</span>21.000
+              <span className="text-oldGold">$</span>18.000<span className="text-gray-500 text-lg uppercase">+iva </span>
               <span className="text-base font-normal text-gray-400">/ Mes</span>
             </h4>
-            <p className="mt-4 text-gray-800 font-medium opacity-80 h-16">
+            <p className="mt-4 text-gray-800 font-medium opacity-80 h-20">
               Para aquellas personas que desean venir de Lunes a Viernes en
               cualquier horario.
             </p>
 
-            <div className="mt-8 space-y-8">
+            <div className="mt-8 space-y-8 h-[20rem]">
               <div className="flex items-center">
                 <BsFillCheckCircleFill width={10} className="fill-oldGold" />
                 <span className="mx-4 text-gray-800 font-medium">
@@ -156,15 +156,15 @@ const Plans = () => {
           <div className="px-6 py-4 transition-colors duration-200 transform bg-bgGold rounded-lg tracking-tight">
             <p className="text-lg font-medium text-darkness">Media jornada</p>
             <h4 className="mt-2 text-4xl font-semibold text-gray-800">
-              <span className="text-oldGold">$</span>14.000
+              <span className="text-oldGold">$</span>11.700<span className="text-gray-500 text-lg uppercase">+iva </span>
               <span className="text-base font-normal text-gray-400">/ Mes</span>
             </h4>
-            <p className="mt-4 text-gray-800 font-medium opacity-80 h-16">
+            <p className="mt-4 text-gray-800 font-medium opacity-80 h-20">
               Para aquellas personas que deseen asistir al cowork solamente
               media jornada.
             </p>
 
-            <div className="mt-8 space-y-8">
+            <div className="mt-8 space-y-8 h-[20rem]">
               <div className="flex items-center">
                 <BsFillCheckCircleFill width={10} className="fill-oldGold" />
                 <span className="mx-4 text-gray-800 font-medium">
@@ -220,14 +220,14 @@ const Plans = () => {
               Oficina privada
             </p>
             <h4 className="mt-2 text-4xl font-semibold text-gray-800 opacity-90">
-              <span className="text-oldGold">$</span>50.000
+              <span className="text-oldGold">$</span>42.000<span className="text-gray-500 text-lg uppercase">+iva </span>
               <span className="text-base font-normal text-gray-400">/ Mes</span>
             </h4>
-            <p className="mt-4 text-gray-800 font-medium opacity-80 h-16">
+            <p className="mt-4 text-gray-800 font-medium opacity-80 h-20">
               Para aquellas personas que deseen tener un espacio único donde atender a sus clientes.
             </p>
 
-            <div className="mt-8 space-y-8">
+            <div className="mt-8 space-y-8 h-[20rem]">
               <div className="flex items-center">
                 <BsFillCheckCircleFill width={10} className="fill-oldGold" />
                 <span className="mx-4 text-gray-800 font-medium">
@@ -286,12 +286,12 @@ const Plans = () => {
               <span className="text-oldGold">$</span>2.000
               <span className="text-base font-normal text-gray-400">/ Hora</span>
             </h4>
-            <p className="mt-4 text-gray-800 font-medium opacity-80 h-16">
+            <p className="mt-4 text-gray-800 font-medium opacity-80 h-20">
               Para aquellas personas que deseen tener reuniones con su equipo o
               con sus clientes de forma privada.
             </p>
 
-            <div className="mt-8 space-y-8">
+            <div className="mt-8 space-y-8 h-[20.5rem]">
               <div className="flex items-center">
                 <BsFillCheckCircleFill width={10} className="fill-oldGold" />
                 <span className="mx-4 text-gray-800 font-medium">
@@ -342,59 +342,52 @@ const Plans = () => {
             </Link>
           </div>
 
-          {/* <div className="px-6 py-4 transition-colors duration-200 transform rounded-lg border tracking-tight">
+          <div className="px-6 py-4 transition-colors duration-200 transform rounded-lg border tracking-tight">
             <p className="text-lg font-medium text-darkness">
-              Sala de reuniones
+              Oficina virtual 
             </p>
             <h4 className="mt-2 text-4xl font-semibold text-gray-800 opacity-90">
-              <span className="text-oldGold">$</span>***
+            <span className="text-oldGold">$</span>4.200<span className="text-gray-500 text-lg uppercase">+iva </span>
               <span className="text-base font-normal text-gray-400">/ Mes</span>
             </h4>
-            <p className="mt-4 text-gray-800 font-medium opacity-80 h-16">
-              Para aquellas personas que deseen tener reuniones con su equipo o
-              con sus clientes de forma privada.
+            <p className="mt-4 text-gray-800 font-medium opacity-80 h-20">
+              Para aquellas personas o empresas que deseen manejar su negocio de forma remota sin sacrificar los beneficios
+              de una oficina física.
             </p>
 
-            <div className="mt-8 space-y-8">
+            <div className="mt-8 space-y-8 h-[20rem]">
               <div className="flex items-center">
                 <BsFillCheckCircleFill width={10} className="fill-oldGold" />
                 <span className="mx-4 text-gray-800 font-medium">
-                  Internet de alta velocidad.
+                  Dirección comercial.
                 </span>
               </div>
 
               <div className="flex items-center">
                 <BsFillCheckCircleFill width={10} className="fill-oldGold" />
                 <span className="mx-4 text-gray-800 font-medium">
-                  Televisor LED con HDMI.
+                  Recepción de correspondencia.
                 </span>
               </div>
 
               <div className="flex items-center">
                 <BsFillCheckCircleFill width={10} className="fill-oldGold" />
                 <span className="mx-4 text-gray-800 font-medium">
-                  Capacidad hasta 12 personas.
+                  Recepción de llamadas.
                 </span>
               </div>
 
               <div className="flex items-center">
                 <BsFillCheckCircleFill width={10} className="fill-oldGold" />
                 <span className="mx-4 text-gray-800 font-medium">
-                  Espacio climatizado.
+                  2 jornadas en sala de reunión.
                 </span>
               </div>
 
               <div className="flex items-center">
                 <BsFillCheckCircleFill width={10} className="fill-oldGold" />
                 <span className="mx-4 text-gray-800 font-medium">
-                  Mobiliario ergónomico.
-                </span>
-              </div>
-
-              <div className="flex items-center">
-                <BsFillCheckCircleFill width={10} className="fill-oldGold" />
-                <span className="mx-4 text-gray-800 font-medium">
-                  Servicio de impresión.
+                  Recepción de correo electrónico.
                 </span>
               </div>
             </div>
@@ -404,7 +397,7 @@ const Plans = () => {
                 Reservar
               </button>
             </Link>
-          </div> */}
+          </div>
         </div>
       </div>
     </section>

@@ -1,118 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaWifi } from "react-icons/fa";
 import { GiLockers } from "react-icons/gi";
 import { SiBuymeacoffee } from "react-icons/si";
 import { BsMailbox } from "react-icons/bs";
 import { MdOutlineChair } from "react-icons/md";
 import { IoIosPeople } from "react-icons/io";
-import { BsMegaphone, BsTelephoneOutbound } from "react-icons/bs";
+import { BsTelephoneOutbound } from "react-icons/bs";
 
 const Services = () => {
   return (
     <>
-      {/* <section id="servicios" className="bg-gray-800 pb-10">
-        <div className="container px-6 py-10 mx-auto">
-          <h2 className="text-3xl font-semibold lg:text-4xl text-white">
-            ¿Qué ofrecemos?
-          </h2>
-
-          <p className="mt-4 text-gray-300 xl:mt-6">
-            Conocé alguno de nuestros servicios.
-          </p>
-
-          <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-16 md:grid-cols-2 xl:grid-cols-3">
-            <div className="space-y-3">
-              <span className="inline-block p-3 text-oldGold bg-bgGold rounded-full">
-                <FaWifi className="w-6 h-6" />
-              </span>
-
-              <p className="text-2xl font-semibold capitalize text-white">
-                Wifi
-              </p>
-
-              <p className="text-gray-300">
-                Con nuestro wifi de alta velocidad, navega y trabaja sin
-                limitaciones ni interrupciones.
-              </p>
-            </div>
-
-            <div className="space-y-3">
-              <span className="inline-block p-3 text-oldGold bg-bgGold rounded-full">
-                <GiLockers className="w-6 h-6" />
-              </span>
-
-              <p className="text-2xl font-semibold capitalize text-white">
-                Lockers
-              </p>
-
-              <p className="text-gray-300">
-                Nuestros lockers te van a permitir guardar tus objetos de valor
-                de forma segura.
-              </p>
-            </div>
-
-            <div className="space-y-3">
-              <span className="inline-block p-3 text-oldGold bg-bgGold rounded-full">
-                <SiBuymeacoffee className="w-6 h-6" />
-              </span>
-
-              <p className="text-2xl font-semiboldcapitalize text-white">
-                Coffe break
-              </p>
-
-              <p className="text-gray-300">
-                Dispone de té, cafe, mate y todo tipo de infusiones con tu
-                membresía.
-              </p>
-            </div>
-
-            <div className="space-y-3">
-              <span className="inline-block p-3 text-oldGold bg-bgGold rounded-full">
-                <BsMailbox className="w-6 h-6" />
-              </span>
-
-              <p className="text-2xl font-semibold capitalize text-white">
-                Dirección
-              </p>
-
-              <p className="text-gray-300">
-                ¿Querés enviar tu correspondencia al cowork? ¡Tranquilo,
-                nosotros la recibimos!
-              </p>
-            </div>
-
-            <div className="space-y-3">
-              <span className="inline-block p-3 text-oldGold bg-bgGold rounded-full">
-                <MdOutlineChair className="w-6 h-6" />
-              </span>
-
-              <p className="text-2xl font-semibold capitalize text-white">
-                Mobiliario
-              </p>
-
-              <p className="text-gray-300">
-                Sentite cómodo en todo momento con nuestros muebles ergónomicos
-                de alta calidad.
-              </p>
-            </div>
-
-            <div className="space-y-3">
-              <span className="inline-block p-3 text-oldGold bg-bgGold rounded-full ">
-                <IoIosPeople className="w-6 h-6" />
-              </span>
-
-              <p className="text-2xl font-semibold capitalize text-white">
-                Sala de reuniones
-              </p>
-
-              <p className="text-gray-300">
-                Tene reuniones con tu equipo de forma privada y hacé crecer tu
-                empresa/emprendimiento.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section> */}
       <section id="servicios" className="bg-white pb-10">
         <div className="container px-6 py-10 mx-auto tracking-tight">
           <h2 className="text-3xl font-semibold lg:text-4xl text-darkness">
