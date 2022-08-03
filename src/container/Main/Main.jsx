@@ -1,355 +1,237 @@
-import React, { useState, useEffect } from "react";
-import Fade from "react-reveal/Fade";
-import Slide from "react-reveal/Slide";
-
-import Logo from "../../assets/images/whitelogo.png";
-import cowork from "../../assets/images/workbox6.jpeg";
-import { FaParking, FaMoneyBillWave } from "react-icons/fa";
-import { AiOutlineSafety } from "react-icons/ai";
-import { GiRoad } from "react-icons/gi";
-import { MdOutlineLocalDining, MdLocalOffer } from "react-icons/md";
-
+import React, { useState } from "react";
+import Logo from "../../assets/images/logo-r.png";
 import { Link } from "react-scroll";
-import TextTransition, { presets } from "react-text-transition";
-import { Roll } from "react-reveal";
 
-const Main = () => {
+import cowork from "../../assets/images/workbox6.jpeg";
+
+const Mainui = () => {
   const [toggleMenu, setToggleMenu] = useState(true);
-  // const [index, setIndex] = useState(0);
-  // const TEXTS = [
-  //   "crecer.",
-  //   "trabajar.",
-  //   "conocer.",
-  //   "ayudar.",
-  //   "aprender.",
-  //   "cooperar.",
-  // ];
-
-  // useEffect(() => {
-  //   const intervalId = setInterval(
-  //     () => setIndex((index) => index + 1),
-  //     3000 // every 3 seconds
-  //   );
-  //   return () => clearTimeout(intervalId);
-  // }, []);
 
   return (
-    <header className="bg-gray-800 pb-10">
-      <nav className="border-b border-gray-700">
-        <div className="container px-6 py-4 mx-auto lg:flex lg:justify-between lg:items-center">
-          <div className="flex items-center justify-between">
+    <>
+      <main className="relative bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+            <svg
+              className="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"
+              fill="currentColor"
+              viewBox="0 0 100 100"
+              preserveAspectRatio="none"
+              aria-hidden="true"
+            >
+              <polygon points="50,0 100,0 50,100 0,100" />
+            </svg>
+
             <div>
-              <a
-                className="text-2xl font-bold text-white lg:text-3xl hover:text-gray-300"
-                href="/"
-              >
-                <img src={Logo} alt="Workbox logo" height={40} width={40} />
-              </a>
-            </div>
-            {/* Mobile button */}
-            <div className="lg:hidden">
-              <button
-                type="button"
-                onClick={() => setToggleMenu((prevState) => !prevState)}
-                className="text-gray-200 hover:text-gray-400 focus:outline-none focus:text-gray-400"
-                aria-label="Toggle menu"
-              >
-                <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current">
-                  <path d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
+              <div className="relative pt-6 px-4 sm:px-6 lg:px-8">
+                <nav
+                  className="relative flex items-center justify-between sm:h-10 lg:justify-start"
+                  aria-label="Global"
+                >
+                  <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
+                    <div className="flex items-center justify-between w-full md:w-auto">
+                      <a
+                        className="text-2xl font-bold text-white lg:text-3xl hover:text-gray-300"
+                        href="/"
+                      >
+                        <img
+                          src={Logo}
+                          alt="Workbox logo"
+                          height={40}
+                          width={40}
+                        />
+                      </a>
+                      <div className="-mr-2 flex items-center md:hidden">
+                        <button
+                          type="button"
+                          onClick={() =>
+                            setToggleMenu((prevState) => !prevState)
+                          }
+                          className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                          aria-expanded="false"
+                        >
+                          <span className="sr-only">Abrir menú</span>
+                          <svg
+                            className="h-6 w-6"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            strokeWidth="2"
+                            stroke="currentColor"
+                            aria-hidden="true"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M4 6h16M4 12h16M4 18h16"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="hidden md:flex md:justify-around md:items-center md:ml-10 md:pr-4 md:space-x-12 ">
+                    <Link
+                      className="block cursor-pointer font-medium border-b border-transparent hover:border-b hover:border-gray-900 text-gray-900 transition-all ease duration-150"
+                      to="servicios"
+                      spy={true}
+                      smooth={true}
+                      duration={100}
+                    >
+                      Servicios
+                    </Link>
 
-          {/* <!-- Mobile Menu open: "block", Menu closed: "hidden" --> */}
-          <div
-            className={"items-center lg:flex" + (toggleMenu ? " hidden" : "")}
-          >
-            <div className="flex flex-col mt-4 space-y-8 lg:flex-row lg:items-center lg:mt-0 lg:space-y-0 lg:-px-8">
-              <Link
-                className="block cursor-pointer font-medium border-b border-transparent hover:border-b hover:border-oldGold text-gray-100 lg:mx-8 hover:text-oldGold transition-all ease duration-150"
-                to="servicios"
-                spy={true}
-                smooth={true}
-                duration={100}
-              >
-                Servicios
-              </Link>
+                    <Link
+                      className="block cursor-pointer font-medium border-b border-transparent hover:border-b hover:border-gray-900 text-gray-900 transition-all ease duration-150"
+                      to="planes"
+                      spy={true}
+                      smooth={true}
+                      duration={100}
+                    >
+                      Planes
+                    </Link>
+                    <Link
+                      className="block cursor-pointer font-medium border-b border-transparent hover:border-b hover:border-gray-900 text-gray-900 transition-all ease duration-150"
+                      to="contacto"
+                      spy={true}
+                      smooth={true}
+                      duration={100}
+                    >
+                      Contacto
+                    </Link>
+                    <Link
+                      className="cursor-pointer flex items-center justify-center px-3 py-1 text-sm lg:mt-0 font-bold tracking-wide text-center text-white transition-all ease duration-300 rounded-sm transform bg-gray-900 border-2 border-transparent hover:border-gray-900 hover:bg-transparent hover:text-gray-900 hover:shadow-sm hover:opacity-90 lg:block"
+                      to="contacto"
+                      spy={true}
+                      smooth={true}
+                      duration={100}
+                    >
+                      Reservar lugar
+                    </Link>
+                  </div>
+                </nav>
+              </div>
 
-              <Link
-                className="block cursor-pointer font-medium border-b border-transparent hover:border-b hover:border-oldGold text-gray-100 lg:mx-8 hover:text-oldGold transition-all ease duration-150"
-                to="planes"
-                spy={true}
-                smooth={true}
-                duration={100}
+              <div
+                className={
+                  "absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right" +
+                  (toggleMenu ? " hidden" : "")
+                }
               >
-                Planes
-              </Link>
-              <Link
-                className="block cursor-pointer font-medium border-b border-transparent hover:border-b hover:border-oldGold text-gray-100 lg:mx-8 hover:text-oldGold transition-all ease duration-150"
-                to="contacto"
-                spy={true}
-                smooth={true}
-                duration={100}
-              >
-                Contacto
-              </Link>
+                <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+                  <div className="px-5 pt-4 flex items-center justify-between">
+                    <div>
+                      <img
+                        src={Logo}
+                        alt="Workbox logo"
+                        height={40}
+                        width={40}
+                      />
+                    </div>
+                    <div className="-mr-2">
+                      <button
+                        type="button"
+                        onClick={() => setToggleMenu((prevState) => !prevState)}
+                        className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                      >
+                        <span className="sr-only">Cerrar menú</span>
+                        <svg
+                          className="h-6 w-6"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth="2"
+                          stroke="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M6 18L18 6M6 6l12 12"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div className="px-6 pt-6 pb-3 space-y-4">
+                    <Link
+                      className="block cursor-pointer font-medium text-gray-900 lg:mx-8 transition-all ease duration-150"
+                      to="servicios"
+                      spy={true}
+                      smooth={true}
+                      duration={100}
+                    >
+                      Servicios
+                    </Link>
+
+                    <Link
+                      className="block cursor-pointer font-medium text-gray-900 lg:mx-8 transition-all ease duration-150"
+                      to="planes"
+                      spy={true}
+                      smooth={true}
+                      duration={100}
+                    >
+                      Planes
+                    </Link>
+                    <Link
+                      className="block cursor-pointer font-medium text-gray-900 lg:mx-8 transition-all ease duration-150"
+                      to="contacto"
+                      spy={true}
+                      smooth={true}
+                      duration={100}
+                    >
+                      Contacto
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
+
+            <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+              <div className="sm:text-center lg:text-left">
+                <h1 className="tracking-tight font-extrabold text-darkness">
+                  <span className="block xl:inline text-4xl md:text-5xl">
+                    Bienvenido a <br />
+                  </span>
+                  <span className="block text-oldGold xl:inline text-6xl md:text-8xl">
+                    Workbox
+                  </span>
+                </h1>
+                <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                  Somos un espacio de conexión, pensado para que puedas
+                  desarrollar todas tus actividades en un cowork a la medida de
+                  tus necesidades.
+                </p>
+                <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                  <div className="rounded-md shadow">
+                    <Link
+                      className="w-full cursor-pointer tracking-tight flex items-center justify-center uppercase px-10 py-3 border border-transparent font-bold rounded-md text-darkness bg-oldGold hover:bg-[#cca712] text-sm transition-all duration-200 ease"
+                      to="planes"
+                      spy={true}
+                      smooth={true}
+                      duration={100}
+                    >
+                      Ver planes
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </main>
           </div>
-          <Link
-            className={
-              "cursor-pointer flex items-center justify-center uppercase px-5 py-3 text-sm mt-4 lg:mt-0 font-semibold text-center text-white transition-all ease duration-300 rounded-lg transform bg-oldGold border-2 border-transparent hover:border-oldGold hover:bg-transparent hover:text-oldGold hover:shadow-sm hover:opacity-90 lg:block" +
-              (toggleMenu ? " hidden" : "")
-            }
-            to="contacto"
-            spy={true}
-            smooth={true}
-            duration={100}
-          >
-            Reserva tu lugar
-          </Link>
         </div>
-      </nav>
-
-      <div className="container flex flex-col px-6 py-10 mx-auto space-y-6 lg:h-[40rem] lg:py-16 lg:flex-row lg:items-center">
-        <div className="w-full lg:w-1/2">
-          <div className="lg:max-w-lg">
-            <h1 className="text-2xl text-white font-medium tracking-widetext-white lg:text-5xl">
-              Bienvenido a Workbox
-            </h1>
-            <p className="mt-2 text-gray-300 lg:text-lg">Espacio de conexión</p>
-            <div className="grid gap-6 mt-8 sm:grid-cols-2">
-              <div className="flex items-center -px-3 text-gray-200">
-                <svg
-                  className="w-5 h-5 mx-3"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-
-                <span className="mx-3">Amplio estacionamiento</span>
-              </div>
-
-              <div className="flex items-center -px-3 text-gray-200">
-                <svg
-                  className="w-5 h-5 mx-3"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-
-                <span className="mx-3">Seguridad todo el día</span>
-              </div>
-
-              <div className="flex items-center -px-3 text-gray-200">
-                <svg
-                  className="w-5 h-5 mx-3"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-
-                <span className="mx-3">Fácil acceso</span>
-              </div>
-
-              <div className="flex items-center-px-3 text-gray-200">
-                <svg
-                  className="w-5 h-5 mx-3"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-
-                <span className="mx-3">Cajeros cercanos</span>
-              </div>
-
-              <div className="flex items-center -px-3 text-gray-200">
-                <svg
-                  className="w-5 h-5 mx-3"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-
-                <span className="mx-3">Patio de comidas</span>
-              </div>
-
-              <div className="flex items-center -px-3 text-gray-200">
-                <svg
-                  className="w-5 h-5 mx-3"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-
-                <span className="mx-3">Todo tipo de negocios</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex items-center justify-center w-full h-[ ] lg:w-1/2">
+        <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
           <img
-            className="object-cover w-full h-full max-w-2xl rounded-md"
+            className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
             src={cowork}
             alt="Workbox espacio de conexión"
           />
         </div>
+      </main>
+      <div className="w-full min-h-[10rem] tracking-tight text-md px-6 sm:px-4 md:px-0 sm:text-lg md:text-2xl font-semibold flex items-center justify-center text-darkness bg-oldGold">
+        El espacio de trabajo que necesitas, cuándo y dónde lo necesitás.
       </div>
-    </header>
-
-    /* <section>
-      <nav className="navbar justify-between px-1 py-4 md:px-16 bg-blackness">
-        <div>
-          <div className="dropdown">
-            <label tabIndex="0" className="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-platinum"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
-            </label>
-            <ul
-              tabIndex="0"
-              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 text-oldGold"
-            >
-              <li>
-                <Link to="servicios" spy={true} smooth={true} duration={100}>
-                  Servicios
-                </Link>
-              </li>
-              <li>
-                <Link to="planes" spy={true} smooth={true} duration={100}>
-                  Planes
-                </Link>
-              </li>
-              <li>
-                <Link to="contacto" spy={true} smooth={true} duration={100}>
-                  Contacto
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <a href="/">
-            <img src={Logo} alt="Workbox logo" height={50} width={50} />
-          </a>
-        </div>
-        <div className="navbar-center w-1/3 2xl:w-1/4 hidden lg:flex">
-          <ul className="w-full flex justify-around font-normal">
-            <li className="tracking-wide text-white text-lg cursor-pointer border-b-2 border-transparent hover:border-oldGold hover:text-oldGold  hover:shadow-xl transition-all ease duration-300">
-              <Link to="servicios" spy={true} smooth={true} duration={100}>
-                Servicios
-              </Link>
-            </li>
-            <li className="tracking-wide text-white text-lg cursor-pointer border-b-2 border-transparent hover:border-oldGold hover:text-oldGold hover:shadow-xl transition-all ease duration-300">
-              <Link to="planes" spy={true} smooth={true} duration={100}>
-                Planes
-              </Link>
-            </li>
-            <li className="tracking-wide text-white text-lg cursor-pointer border-b-2 border-transparent hover:border-oldGold hover:text-oldGold hover:shadow-xl transition-all ease duration-300">
-              <Link to="contacto" spy={true} smooth={true} duration={100}>
-                Contacto
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div className="justify-end">
-          <Link
-            className="btn btn-sm md:btn-md btn-primary mr-1 sm:mr-4 lg:mr-0 text-white bg-oldGold border-oldGold hover:bg-oldGold hover:border-oldGold hover:shadow-xl hover:opacity-90"
-            to="contacto"
-            spy={true}
-            smooth={true}
-            duration={100}
-          >
-            ¡Quiero mi Lugar!
-          </Link>
-        </div>
-      </nav>
-
-      <section className="w-full lg:h-screen bg-blackness">
-        <div className="flex mx-auto w-full h-full ">
-          <div className="flex flex-col w-1/2 h-full justify-center items-center">
-            <div className="max-w-xl lg:-mt-40">
-              <h1 className="text-2xl sm:text-5xl xl:text-8xl font-normal text-white">
-                Workbox
-              </h1>
-              <hr className="border my-4 w-2/5 border-oldGold" />
-              <p className="text-xl font-light text-grayness">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime
-                reprehenderit modi voluptatibus illum quam doloribus earum
-                debitis est qui sint?
-              </p>
-              <button className="btn  btn-primary mt-4 text-oldGold bg-white ">Conocer más</button>
-            </div>
-          </div>
-          <div className="w-1/2 h-full">
-            <img
-              src={cowork}
-              alt="Tu espacio de conexion"
-              className="object-cover w-full h-full object-center"
-            />
-          </div>
-        </div>
-      </section>
-    </section> */
+    </>
   );
 };
 
-export default Main;
+export default Mainui;
