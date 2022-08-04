@@ -151,12 +151,22 @@ export default function App() {
               <label className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">
                 Teléfono
               </label>
-
               <input
                 className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-oldGold focus:ring-oldGold focus:outline-none focus:ring focus:ring-opacity-40"
                 type="phone"
-                {...register("phone")}
+                {...register("phone", {
+                  pattern: {
+                    value:
+                      /^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$/,
+                    message: "Número inválido",
+                  },
+                })}
               />
+              {errors.phone && (
+                <span className="text-md font-medium mt-3 text-red-400">
+                  Número telefónico inválido
+                </span>
+              )}
             </div>
             <div className="w-full mt-4">
               <label className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">

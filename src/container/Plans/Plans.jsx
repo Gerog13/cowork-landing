@@ -29,7 +29,7 @@ const Plans = () => {
           <div className="px-6 py-4 transition-colors duration-200 transform rounded-lg border tracking-tight">
             <p className="text-lg font-medium text-darkness">Pase por el día</p>
             <h4 className="mt-2 text-4xl font-semibold text-gray-800 opacity-90">
-              <span className="text-oldGold">$</span>3.000
+              <span className="text-oldGold">$</span>2.550<span className="text-gray-500 text-lg uppercase">+iva </span>
               <span className="text-base font-normal text-gray-400">/ Día</span>
             </h4>
             <p className="mt-4 text-gray-800 font-medium opacity-80 h-20">
@@ -98,7 +98,7 @@ const Plans = () => {
               <span className="text-base font-normal text-gray-400">/ Mes</span>
             </h4>
             <p className="mt-4 text-gray-800 font-medium opacity-80 h-20">
-              Para aquellas personas que desean venir de Lunes a Viernes en
+              Para aquellas personas que deseen concurrir al cowork de Lunes a Viernes en
               cualquier horario.
             </p>
 
@@ -224,7 +224,7 @@ const Plans = () => {
               <span className="text-base font-normal text-gray-400">/ Mes</span>
             </h4>
             <p className="mt-4 text-gray-800 font-medium opacity-80 h-20">
-              Para aquellas personas que deseen tener un espacio único donde atender a sus clientes.
+              Para aquellas personas que deseen tener un espacio privado
             </p>
 
             <div className="mt-8 space-y-8 h-[20rem]">
@@ -283,7 +283,7 @@ const Plans = () => {
               Sala de reuniones
             </p>
             <h4 className="mt-2 text-4xl font-semibold text-gray-800 opacity-90">
-              <span className="text-oldGold">$</span>2.000
+              <span className="text-oldGold">$</span>1.700<span className="text-gray-500 text-lg uppercase">+iva </span>
               <span className="text-base font-normal text-gray-400">/ Hora</span>
             </h4>
             <p className="mt-4 text-gray-800 font-medium opacity-80 h-20">
