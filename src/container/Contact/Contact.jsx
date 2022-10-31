@@ -31,196 +31,279 @@ export default function App() {
         },
         (error) => {
           console.log(error.text);
+          setTimeout(() => {
+            setIsEmailSent(false);
+          }, 1000);
         }
       );
     reset();
   };
 
   return (
-    <div id="contacto" className="flex flex-col items-center pt-10 bg-gray-100">
-      <h2 className="container text-3xl px-6 py-10 font-semibold lg:text-4xl text-blackness">
-        Contacto
-      </h2>
-      <div className="container px-6 pb-20 mx-auto grid grid-cols-1 lg:grid-cols-2 place-content-center place-items-start">
-        <form
-          ref={form}
-          onSubmit={handleSubmit(sendEmail)}
-          className="px-6 py-4 bg-white rounded-md shadow-md w-full dark:bg-gray-800"
-        >
-          <h2 className="text-3xl font-semibold text-center text-gray-800 dark:text-white">
-            Reserva tu lugar
-          </h2>
-          <p className="mt-3 text-center text-gray-600 dark:text-gray-400">
-            Llená el siguiente formulario y nos estaremos contactando con vos a
-            la brevedad.
-          </p>
+    <section className="bg-gray-100" id="contacto">
+      <div className="container px-6 py-14 mx-auto">
+        <div className="lg:flex lg:items-center lg:-mx-6">
+          <div className="lg:w-1/2 lg:mx-6">
+            <h1 className="text-3xl font-semibold text-darkness apitalize dark:text-white lg:text-4xl xl:text-[3.5rem]">
+              Sé parte de <span className="text-oldGold">Workbox</span>
+            </h1>
 
-          <div className="grid grid-cols-1 gap-6 mt-6 sm:grid-cols-2 md:grid-cols-3">
-            <div className="flex flex-col items-center text-center px-4 py-3 transition-colors duration-200 transform rounded-md bg-oldGold">
-              <svg
-                className="w-5 h-5 fill-darkness"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                  clipRule="evenodd"
-                />
-              </svg>
+            <div className="mt-6 md:mt-8 lg:mt-10 space-y-4 md:space-y-6 lg:space-y-8">
+              <p className="flex items-start -mx-2 lg:text-lg">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-6 mx-2 text-oldGold"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
 
-              <span className="mt-2 text-darkness opacity-90 font-medium">
-                La Barraca Mall, Local L16
-              </span>
-            </div>
-
-            <div className="flex flex-col items-center text-center px-4 py-3 text-gray-900 transition-colors duration-200 transform rounded-md bg-oldGold">
-              <svg
-                className="w-5 h-5 fill-darkness"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-              >
-                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-              </svg>
-
-              <span className="mt-2 text-darkness opacity-90 font-medium">
-                +54 9 261 777 7257
-              </span>
-            </div>
-
-            <div className="flex flex-col items-center text-center px-4 py-3 text-gray-900 transition-colors duration-200 transform rounded-md bg-oldGold">
-              <svg
-                className="w-5 h-5 fill-darkness"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-              >
-                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-              </svg>
-
-              <span className="mt-2 text-darkness opacity-90 font-medium break-all">
-                workboxmendoza@gmail.com
-              </span>
-            </div>
-          </div>
-
-          <div className="mt-6 ">
-            <div className="items-center -mx-2 md:flex">
-              <div className="w-full mx-2">
-                <label className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">
-                  Nombre*
-                </label>
-
-                <input
-                  className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-oldGold focus:ring-oldGold focus:outline-none focus:ring focus:ring-opacity-40"
-                  type="text"
-                  {...register("name", { required: true })}
-                />
-                {errors.name && (
-                  <span className="text-md font-medium mt-3 text-red-400">
-                    Campo requerido
-                  </span>
-                )}
-              </div>
-
-              <div className="w-full mx-2 mt-4 md:mt-0">
-                <label className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">
-                  E-mail*
-                </label>
-
-                <input
-                  className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-oldGold focus:ring-oldGold focus:outline-none focus:ring focus:ring-opacity-40"
-                  type="email"
-                  {...register("email", {
-                    required: "required",
-                    pattern: {
-                      value: /\S+@\S+\.\S+/,
-                      message: "Formato inválido",
-                    },
-                  })}
-                />
-                {errors.email && (
-                  <span className="text-md font-medium mt-3 text-red-400">
-                    Correo electrónico inválido
-                  </span>
-                )}
-              </div>
-            </div>
-
-            <div className="w-full mt-4 ">
-              <label className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">
-                Teléfono
-              </label>
-              <input
-                className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-oldGold focus:ring-oldGold focus:outline-none focus:ring focus:ring-opacity-40"
-                type="phone"
-                {...register("phone", {
-                  pattern: {
-                    value:
-                      /^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$/,
-                    message: "Número inválido",
-                  },
-                })}
-              />
-              {errors.phone && (
-                <span className="text-md font-medium mt-3 text-red-400">
-                  Número telefónico inválido
+                <span className="mx-2 text-gray-700 w-full">
+                  Las Cañas 1833, La Barraca Mall, Mendoza
                 </span>
-              )}
-            </div>
-            <div className="w-full mt-4">
-              <label className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">
-                Mensaje
-              </label>
+              </p>
 
-              <textarea
-                {...register("message")}
-                className="resize-none block w-full h-20 lg:h-40 px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-oldGold focus:ring-oldGold focus:outline-none focus:ring focus:ring-opacity-40"
-              ></textarea>
+              <p className="flex items-start -mx-2 lg:text-lg">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-6 mx-2 text-oldGold"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  />
+                </svg>
+
+                <span className="mx-2 text-gray-700 truncate  w-full">
+                  +54 9 261 777 7257
+                </span>
+              </p>
+
+              <p className="flex items-start -mx-2 lg:text-lg">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-6 mx-2 text-oldGold"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+
+                <span className="mx-2 text-gray-700 truncate w-full">
+                  workboxmendoza@gmail.com
+                </span>
+              </p>
             </div>
 
-            {isEmailSent ? (
-              <div className="flex justify-center mt-6">
-                <button
-                  className="flex items-center px-20 py-2 text-white transition-colors duration-200 transform bg-green-800 rounded-md"
-                  disabled
+            <div className="mt-6 w-80 md:mt-8">
+              <h3 className="text-gray-600 lg:text-lg font-semibold">¡Seguinos!</h3>
+
+              <div className="flex mt-2 -mx-1.5 ">
+                <a
+                  className="mx-1.5 text-gray-400 transition-colors duration-300 transform hover:text-oldGold"
+                  href="https://www.instagram.com/workboxmza/?hl=es-la"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <svg
-                    className="w-6 h-6 text-white fill-current mr-2"
-                    viewBox="0 0 40 40"
+                    className="w-8 h-8"
+                    viewBox="0 0 24 24"
+                    fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path d="M20 3.33331C10.8 3.33331 3.33337 10.8 3.33337 20C3.33337 29.2 10.8 36.6666 20 36.6666C29.2 36.6666 36.6667 29.2 36.6667 20C36.6667 10.8 29.2 3.33331 20 3.33331ZM16.6667 28.3333L8.33337 20L10.6834 17.65L16.6667 23.6166L29.3167 10.9666L31.6667 13.3333L16.6667 28.3333Z" />
+                    <path
+                      d="M11.9294 7.72275C9.65868 7.72275 7.82715 9.55428 7.82715 11.825C7.82715 14.0956 9.65868 15.9271 11.9294 15.9271C14.2 15.9271 16.0316 14.0956 16.0316 11.825C16.0316 9.55428 14.2 7.72275 11.9294 7.72275ZM11.9294 14.4919C10.462 14.4919 9.26239 13.2959 9.26239 11.825C9.26239 10.354 10.4584 9.15799 11.9294 9.15799C13.4003 9.15799 14.5963 10.354 14.5963 11.825C14.5963 13.2959 13.3967 14.4919 11.9294 14.4919ZM17.1562 7.55495C17.1562 8.08692 16.7277 8.51178 16.1994 8.51178C15.6674 8.51178 15.2425 8.08335 15.2425 7.55495C15.2425 7.02656 15.671 6.59813 16.1994 6.59813C16.7277 6.59813 17.1562 7.02656 17.1562 7.55495ZM19.8731 8.52606C19.8124 7.24434 19.5197 6.10901 18.5807 5.17361C17.6453 4.23821 16.51 3.94545 15.2282 3.88118C13.9073 3.80621 9.94787 3.80621 8.62689 3.88118C7.34874 3.94188 6.21341 4.23464 5.27444 5.17004C4.33547 6.10544 4.04628 7.24077 3.98201 8.52249C3.90704 9.84347 3.90704 13.8029 3.98201 15.1238C4.04271 16.4056 4.33547 17.5409 5.27444 18.4763C6.21341 19.4117 7.34517 19.7045 8.62689 19.7687C9.94787 19.8437 13.9073 19.8437 15.2282 19.7687C16.51 19.708 17.6453 19.4153 18.5807 18.4763C19.5161 17.5409 19.8089 16.4056 19.8731 15.1238C19.9481 13.8029 19.9481 9.84704 19.8731 8.52606ZM18.1665 16.5412C17.8881 17.241 17.349 17.7801 16.6456 18.0621C15.5924 18.4799 13.0932 18.3835 11.9294 18.3835C10.7655 18.3835 8.26272 18.4763 7.21307 18.0621C6.51331 17.7837 5.9742 17.2446 5.69215 16.5412C5.27444 15.488 5.37083 12.9888 5.37083 11.825C5.37083 10.6611 5.27801 8.15832 5.69215 7.10867C5.97063 6.40891 6.50974 5.8698 7.21307 5.58775C8.26629 5.17004 10.7655 5.26643 11.9294 5.26643C13.0932 5.26643 15.596 5.17361 16.6456 5.58775C17.3454 5.86623 17.8845 6.40534 18.1665 7.10867C18.5843 8.16189 18.4879 10.6611 18.4879 11.825C18.4879 12.9888 18.5843 15.4916 18.1665 16.5412Z"
+                      fill="currentColor"
+                    />
                   </svg>
-                  Enviado correctamente
-                </button>
+                </a>
+                <a
+                  className="mx-1.5 text-gray-400 transition-colors duration-300 transform hover:text-oldGold"
+                  href="https://www.linkedin.com/company/work-box-espacio-de-conexi%C3%B3n/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg
+                    className="w-8 h-8"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15.2 8.80005C16.4731 8.80005 17.694 9.30576 18.5941 10.2059C19.4943 11.1061 20 12.327 20 13.6V19.2H16.8V13.6C16.8 13.1757 16.6315 12.7687 16.3314 12.4687C16.0313 12.1686 15.6244 12 15.2 12C14.7757 12 14.3687 12.1686 14.0687 12.4687C13.7686 12.7687 13.6 13.1757 13.6 13.6V19.2H10.4V13.6C10.4 12.327 10.9057 11.1061 11.8059 10.2059C12.7061 9.30576 13.927 8.80005 15.2 8.80005Z"
+                      fill="currentColor"
+                    />
+                    <path
+                      d="M7.2 9.6001H4V19.2001H7.2V9.6001Z"
+                      fill="currentColor"
+                    />
+                    <path
+                      d="M5.6 7.2C6.48366 7.2 7.2 6.48366 7.2 5.6C7.2 4.71634 6.48366 4 5.6 4C4.71634 4 4 4.71634 4 5.6C4 6.48366 4.71634 7.2 5.6 7.2Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </a>
+
+                <a
+                  className="mx-1.5 text-gray-400 transition-colors duration-300 transform hover:text-oldGold"
+                  href="https://www.facebook.com/Workbox-112111401541793"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg
+                    className="w-8 h-8"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7 10.2222V13.7778H9.66667V20H13.2222V13.7778H15.8889L16.7778 10.2222H13.2222V8.44444C13.2222 8.2087 13.3159 7.9826 13.4826 7.81591C13.6493 7.64921 13.8754 7.55556 14.1111 7.55556H16.7778V4H14.1111C12.9324 4 11.8019 4.46825 10.9684 5.30175C10.1349 6.13524 9.66667 7.2657 9.66667 8.44444V10.2222H7Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </a>
               </div>
-            ) : (
-              <div className="flex justify-center mt-6">
-                <button className="px-20 py-2 text-white transition-colors duration-200 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600">
-                  Enviar
-                </button>
-              </div>
-            )}
+            </div>
           </div>
-        </form>
-        <div className="w-full mt-10 lg:mt-0 flex items-center justify-center">
-          <div className="w-full lg:w-3/4 flex flex-col self-center">
-            <iframe
-              title="La barraca mall"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1991.5530299886987!2d-68.82192615117098!3d-32.91456744295352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e095097de9a85%3A0x5d63cc2efae8b1c1!2sLa%20Barraca%20Mall!5e0!3m2!1ses-419!2sar!4v1658089060140!5m2!1ses-419!2sar"
-              height="450"
-              className="border-0 w-full"
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-            <span className="pt-4 text-gray-800">
-              Las Cañas 1833, Dorrego Mendoza <br /> La barraca mall{" "}
-            </span>
+
+          <div className="mt-8 lg:w-1/2 lg:mx-6">
+            <div className="w-full px-8 py-10 mx-auto overflow-hidden bg-white rounded-lg shadow-2xl dark:bg-gray-900 lg:max-w-xl shadow-gray-300/50 dark:shadow-black/50">
+              <h1 className="text-lg font-medium text-gray-700">
+                Reserva tu lugar
+              </h1>
+
+              <form
+                ref={form}
+                onSubmit={handleSubmit(sendEmail)}
+                className="mt-6"
+              >
+                <div className="mt-6 ">
+                  <div className="items-center -mx-2 md:flex">
+                    <div className="w-full mx-2">
+                      <label className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">
+                        Nombre*
+                      </label>
+
+                      <input
+                        className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-oldGold focus:ring-oldGold focus:outline-none focus:ring focus:ring-opacity-40"
+                        type="text"
+                        {...register("name", { required: true })}
+                      />
+                      {errors.name && (
+                        <span className="text-md font-medium mt-3 text-red-400">
+                          Campo requerido
+                        </span>
+                      )}
+                    </div>
+
+                    <div className="w-full mx-2 mt-4 md:mt-0">
+                      <label className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">
+                        E-mail*
+                      </label>
+
+                      <input
+                        className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-oldGold focus:ring-oldGold focus:outline-none focus:ring focus:ring-opacity-40"
+                        type="email"
+                        {...register("email", {
+                          required: "required",
+                          pattern: {
+                            value: /\S+@\S+\.\S+/,
+                            message: "Formato inválido",
+                          },
+                        })}
+                      />
+                      {errors.email && (
+                        <span className="text-md font-medium mt-3 text-red-400">
+                          Correo electrónico inválido
+                        </span>
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="w-full mt-4 ">
+                    <label className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">
+                      Teléfono
+                    </label>
+                    <input
+                      className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-oldGold focus:ring-oldGold focus:outline-none focus:ring focus:ring-opacity-40"
+                      type="phone"
+                      {...register("phone", {
+                        pattern: {
+                          value:
+                            /^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$/,
+                          message: "Número inválido",
+                        },
+                      })}
+                    />
+                    {errors.phone && (
+                      <span className="text-md font-medium mt-3 text-red-400">
+                        Número telefónico inválido
+                      </span>
+                    )}
+                  </div>
+                  <div className="w-full mt-4">
+                    <label className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">
+                      Mensaje
+                    </label>
+
+                    <textarea
+                      {...register("message")}
+                      className="resize-none block w-full h-20 lg:h-40 px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-oldGold focus:ring-oldGold focus:outline-none focus:ring focus:ring-opacity-40"
+                    ></textarea>
+                  </div>
+
+                  {isEmailSent ? (
+                    <div className="flex justify-center mt-6">
+                      <button
+                        className="flex items-center px-20 py-2 text-white transition-colors duration-200 transform bg-green-800 rounded-md"
+                        disabled
+                      >
+                        <svg
+                          className="w-6 h-6 text-white fill-current mr-2"
+                          viewBox="0 0 40 40"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M20 3.33331C10.8 3.33331 3.33337 10.8 3.33337 20C3.33337 29.2 10.8 36.6666 20 36.6666C29.2 36.6666 36.6667 29.2 36.6667 20C36.6667 10.8 29.2 3.33331 20 3.33331ZM16.6667 28.3333L8.33337 20L10.6834 17.65L16.6667 23.6166L29.3167 10.9666L31.6667 13.3333L16.6667 28.3333Z" />
+                        </svg>
+                        Enviado
+                      </button>
+                    </div>
+                  ) : (
+                    <div className="flex justify-center mt-6">
+                      <button className="px-20 py-2 text-white transition-colors duration-200 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600">
+                        Enviar
+                      </button>
+                    </div>
+                  )}
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

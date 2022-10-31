@@ -1,6 +1,5 @@
 import React from "react";
 import logo from "../../assets/images/letterslogo.png";
-import { BsWhatsapp, BsInstagram, BsFacebook } from "react-icons/bs";
 
 const Footer = () => {
   return (
@@ -21,55 +20,40 @@ const Footer = () => {
               <p className="max-w-md text-gray-500 dark:text-gray-400">
                 Espacio de conexión
               </p>
-
-              <div className="flex w-24 justify-between mt-4">
-                <a
-                  className="text-oldGold hover:text-[#cca712] transition-all ease-out duration-300"
-                  href="https://wa.me/2613004404"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <BsWhatsapp className="text-2xl" />
-                </a>
-
-                <a
-                  className=" text-oldGold hover:text-[#cca712] transition-all ease-out duration-300"
-                  href="https://www.instagram.com/workboxmza/?hl=es-la"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <BsInstagram className="text-2xl" />
-                </a>
-
-                <a
-                  className=" text-oldGold hover:text-[#cca712] transition-all ease-out duration-300"
-                  href="https://www.facebook.com/Workbox-112111401541793"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <BsFacebook className="text-2xl" />
-                </a>
+              <div className="mt-6 grid grid-cols-2 gap-6">
+                <div>
+                  <h3 className="text-gray-700 uppercase dark:text-white">
+                    Contacto
+                  </h3>
+                  <span className="block mt-2 text-sm text-gray-600 dark:text-gray-400">
+                    +54 9 261 777 7257
+                  </span>
+                  <span className="block mt-2 text-sm text-gray-600 dark:text-gray-400">
+                    workboxmendoza@gmail.com
+                  </span>
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="mt-6 lg:mt-0">
-            <div className="grid grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-gray-700 uppercase dark:text-white">
-                  Contacto
-                </h3>
-                <span className="block mt-2 text-sm text-gray-600 dark:text-gray-400">
-                  +54 9 261 777 7257
-                </span>
-                <span className="block mt-2 text-sm text-gray-600 dark:text-gray-400">
-                  workboxmendoza@gmail.com
-                </span>
-                <span className="block mt-2 text-sm text-gray-600 dark:text-gray-400">
-                  Las Cañas 1833, Dorrego Mendoza <br /> La Barraca Mall - Local
-                  L16
-                </span>
-              </div>
+          <div className="w-full lg:w-1/2 xl:w-1/3 mt-6 lg:mt-0">
+            <h3 className="text-gray-700 dark:text-white font-semibold">
+              Nuestra ubicación
+            </h3>
+            <div className="w-full flex flex-col">
+              <iframe
+                title="La Barraca Mall"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1408.2430282153405!2d-68.82240795278774!3d-32.91441812072326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e095097de9a85%3A0x5d63cc2efae8b1c1!2sLa%20Barraca%20Mall!5e0!3m2!1ses-419!2sar!4v1667216690807!5m2!1ses-419!2sar"
+                height="300"
+                style={{ border: "0" }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+              <span className="block mt-2 text-sm text-gray-600 dark:text-gray-400">
+                Las Cañas 1833, Dorrego Mendoza <br /> La Barraca Mall - Local
+                L16
+              </span>
             </div>
           </div>
         </div>
