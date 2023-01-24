@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Logo from "../../assets/images/logo-r.png";
 import { Link } from "react-scroll";
 
-import cowork from "../../assets/images/workbox6.jpeg";
+import cowork from "../../assets/images/coworknew2.jpg";
 
 const Mainui = () => {
   const [toggleMenu, setToggleMenu] = useState(true);

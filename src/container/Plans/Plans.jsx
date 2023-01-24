@@ -9,7 +9,7 @@ const PLANS = [
     id: 1,
     title: "Pase por el día",
     billingPeriod: "day",
-    price: 2800,
+    price: 2500,
     description:
       "Accedé por la jornada laboral completa a todos los beneficios que Workbox te brinda.",
   },
@@ -17,10 +17,9 @@ const PLANS = [
     id: 2,
     title: "Media jornada",
     billingPeriod: "month",
-    price: 2574,
+    price: 3400,
     description:
       "Para aquellos coworkers que quieran desarrollar sus tareas y llevar a cabo sus proyectos en una jornada reducida.",
-    multiplyDays: true,
   },
   {
     id: 3,
@@ -29,13 +28,12 @@ const PLANS = [
     price: 3960,
     description:
       "Destinado a los coworkers que quieran disponer de nuestras instalaciones en cualquier horario.",
-    multiplyDays: true,
   },
   {
     id: 4,
     title: "Box",
     billingPeriod: "month",
-    price: 26800,
+    price: 37900,
     description:
       "Espacio semi-privado fijo y de uso exclusivo para 2 personas, equipado con el mejor mobiliario.",
   },
@@ -43,7 +41,7 @@ const PLANS = [
     id: 5,
     title: "Oficina privada",
     billingPeriod: "month",
-    price: 46200,
+    price: 65600,
     description:
       "Espacio privado climatizado con capacidad hasta 6 personas acondicionado con mobiliario ergonómico premium.",
   },
@@ -51,7 +49,7 @@ const PLANS = [
     id: 6,
     title: "Sala de reuniones",
     billingPeriod: "hour",
-    price: 2500,
+    price: 4500,
     description:
       "Para aquellas personas que deseen tener reuniones con su equipo o con sus clientes de forma privada.",
   },
@@ -59,22 +57,53 @@ const PLANS = [
     id: 7,
     title: "Oficina Virtual",
     billingPeriod: "month",
-    price: 5000,
+    price: 4800,
     description:
       "Te ofrecemos un domicilio comercial, recibimos tu correspondencia y atendemos de manera telefónica o virtual via e-mail a cada uno de tus clientes.",
   },
 ];
 
 const PlanCard = ({
+  id,
   title,
   price,
   description,
   amountOfDays,
   billingPeriod,
-  multiplyDays,
 }) => {
   let billingText;
-  let billingPrice = multiplyDays ? price * amountOfDays : price;
+  let billingPrice;
+  if (id === 2) {
+    switch (amountOfDays) {
+      case "2":
+        billingPrice = 6800;
+        break;
+      case "3":
+        billingPrice = 9700;
+        break;
+      case "5":
+        billingPrice = 15300;
+        break;
+      default:
+    }
+  } else if (id === 3) {
+    switch (amountOfDays) {
+      case "2":
+        billingPrice = 12300;
+        break;
+      case "3":
+        billingPrice = 17500;
+
+        break;
+      case "5":
+        billingPrice = 27700;
+        break;
+      default:
+    }
+  } else {
+    billingPrice = price;
+  }
+
   switch (billingPeriod) {
     case "day":
       billingText = "/ Día";
@@ -89,11 +118,12 @@ const PlanCard = ({
       billingText = "";
   }
   return (
-    <div className="mx-2 px-6 py-4 transition-colors duration-200 transform rounded-md border tracking-tight h-64 lg:h-60 xl:h-56 flex justify-between flex-col">
+    <div className="mx-2 px-6 py-4 transition-colors duration-200 transform rounded-md border tracking-tight h-64 lg:h-[18rem] xl:h-[16rem] flex justify-between flex-col">
       <p className="text-lg font-medium text-darkness">{title}</p>
       <h4 className="text-4xl font-semibold text-gray-800 opacity-90">
         <span className="text-oldGold">$</span>
         {billingPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
+
         <span className="text-gray-500 text-lg uppercase">+iva </span>
         <span className="text-base font-normal text-gray-400">
           {billingText}
@@ -229,12 +259,12 @@ const Plans = () => {
             {PLANS.map((plan) => (
               <PlanCard
                 key={plan.id}
+                id={plan.id}
                 title={plan.title}
                 price={plan.price}
                 description={plan.description}
                 amountOfDays={amountOfDays}
                 billingPeriod={plan.billingPeriod}
-                multiplyDays={plan.multiplyDays}
               />
             ))}
           </Carousel>
