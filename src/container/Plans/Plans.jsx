@@ -123,8 +123,6 @@ const PlanCard = ({
       <h4 className="text-4xl font-semibold text-gray-800 opacity-90">
         <span className="text-oldGold">$</span>
         {billingPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
-
-        <span className="text-gray-500 text-lg uppercase">+iva </span>
         <span className="text-base font-normal text-gray-400">
           {billingText}
         </span>
