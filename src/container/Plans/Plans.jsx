@@ -9,7 +9,7 @@ const PLANS = [
     id: 1,
     title: "Pase por el día",
     billingPeriod: "day",
-    price: 2500,
+    price: 3000,
     description:
       "Accedé por la jornada laboral completa a todos los beneficios que Workbox te brinda.",
   },
@@ -33,7 +33,7 @@ const PLANS = [
     id: 4,
     title: "Box",
     billingPeriod: "month",
-    price: 37900,
+    price: 45900,
     description:
       "Espacio semi-privado fijo y de uso exclusivo para 2 personas, equipado con el mejor mobiliario.",
   },
@@ -41,7 +41,7 @@ const PLANS = [
     id: 5,
     title: "Oficina privada",
     billingPeriod: "month",
-    price: 65600,
+    price: 80000,
     description:
       "Espacio privado climatizado con capacidad hasta 6 personas acondicionado con mobiliario ergonómico premium.",
   },
@@ -49,7 +49,7 @@ const PLANS = [
     id: 6,
     title: "Sala de reuniones",
     billingPeriod: "hour",
-    price: 4500,
+    price: 5500,
     description:
       "Para aquellas personas que deseen tener reuniones con su equipo o con sus clientes de forma privada.",
   },
@@ -57,7 +57,7 @@ const PLANS = [
     id: 7,
     title: "Oficina Virtual",
     billingPeriod: "month",
-    price: 4800,
+    price: 5800,
     description:
       "Te ofrecemos un domicilio comercial, recibimos tu correspondencia y atendemos de manera telefónica o virtual via e-mail a cada uno de tus clientes.",
   },
@@ -76,27 +76,26 @@ const PlanCard = ({
   if (id === 2) {
     switch (amountOfDays) {
       case "2":
-        billingPrice = 6800;
+        billingPrice = 8300;
         break;
       case "3":
-        billingPrice = 9700;
+        billingPrice = 11800;
         break;
       case "5":
-        billingPrice = 15300;
+        billingPrice = 18500;
         break;
       default:
     }
   } else if (id === 3) {
     switch (amountOfDays) {
       case "2":
-        billingPrice = 12300;
+        billingPrice = 14900;
         break;
       case "3":
-        billingPrice = 17500;
-
+        billingPrice = 21200;
         break;
       case "5":
-        billingPrice = 27700;
+        billingPrice = 33500;
         break;
       default:
     }
@@ -123,6 +122,7 @@ const PlanCard = ({
       <h4 className="text-4xl font-semibold text-gray-800 opacity-90">
         <span className="text-oldGold">$</span>
         {billingPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
+
         <span className="text-base font-normal text-gray-400">
           {billingText}
         </span>
