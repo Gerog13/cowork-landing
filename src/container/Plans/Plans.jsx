@@ -1,65 +1,65 @@
-import React, { useState } from "react";
-import { Link } from "react-scroll";
-import { IoIosArrowRoundForward, IoIosArrowRoundBack } from "react-icons/io";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import React, { useState } from 'react';
+import { Link } from 'react-scroll';
+import { IoIosArrowRoundForward, IoIosArrowRoundBack } from 'react-icons/io';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 const PLANS = [
   {
     id: 1,
-    title: "Pase por el día",
-    billingPeriod: "day",
+    title: 'Pase por el día',
+    billingPeriod: 'day',
     price: 3000,
     description:
-      "Accedé por la jornada laboral completa a todos los beneficios que Workbox te brinda.",
+      'Accedé por la jornada laboral completa a todos los beneficios que Workbox te brinda.',
   },
   {
     id: 2,
-    title: "Media jornada",
-    billingPeriod: "month",
+    title: 'Media jornada',
+    billingPeriod: 'month',
     price: 3400,
     description:
-      "Para aquellos coworkers que quieran desarrollar sus tareas y llevar a cabo sus proyectos en una jornada reducida.",
+      'Para aquellos coworkers que quieran desarrollar sus tareas y llevar a cabo sus proyectos en una jornada reducida.',
   },
   {
     id: 3,
-    title: "Jornada completa",
-    billingPeriod: "month",
+    title: 'Jornada completa',
+    billingPeriod: 'month',
     price: 3960,
     description:
-      "Destinado a los coworkers que quieran disponer de nuestras instalaciones en cualquier horario.",
+      'Destinado a los coworkers que quieran disponer de nuestras instalaciones en cualquier horario.',
   },
   {
     id: 4,
-    title: "Box",
-    billingPeriod: "month",
+    title: 'Box',
+    billingPeriod: 'month',
     price: 45900,
     description:
-      "Espacio semi-privado fijo y de uso exclusivo para 2 personas, equipado con el mejor mobiliario.",
+      'Espacio semi-privado fijo y de uso exclusivo para 2 personas, equipado con el mejor mobiliario.',
   },
   {
     id: 5,
-    title: "Oficina privada",
-    billingPeriod: "month",
+    title: 'Oficina privada',
+    billingPeriod: 'month',
     price: 80000,
     description:
-      "Espacio privado climatizado con capacidad hasta 6 personas acondicionado con mobiliario ergonómico premium.",
+      'Espacio privado climatizado con capacidad hasta 6 personas acondicionado con mobiliario ergonómico premium.',
   },
   {
     id: 6,
-    title: "Sala de reuniones",
-    billingPeriod: "hour",
+    title: 'Sala de reuniones',
+    billingPeriod: 'hour',
     price: 5500,
     description:
-      "Para aquellas personas que deseen tener reuniones con su equipo o con sus clientes de forma privada.",
+      'Para aquellas personas que deseen tener reuniones con su equipo o con sus clientes de forma privada.',
   },
   {
     id: 7,
-    title: "Oficina Virtual",
-    billingPeriod: "month",
+    title: 'Oficina Virtual',
+    billingPeriod: 'month',
     price: 5800,
     description:
-      "Te ofrecemos un domicilio comercial, recibimos tu correspondencia y atendemos de manera telefónica o virtual via e-mail a cada uno de tus clientes.",
+      'Te ofrecemos un domicilio comercial, recibimos tu correspondencia y atendemos de manera telefónica o virtual via e-mail a cada uno de tus clientes.',
   },
 ];
 
@@ -75,26 +75,26 @@ const PlanCard = ({
   let billingPrice;
   if (id === 2) {
     switch (amountOfDays) {
-      case "2":
+      case '2':
         billingPrice = 8300;
         break;
-      case "3":
+      case '3':
         billingPrice = 11800;
         break;
-      case "5":
+      case '5':
         billingPrice = 18500;
         break;
       default:
     }
   } else if (id === 3) {
     switch (amountOfDays) {
-      case "2":
+      case '2':
         billingPrice = 14900;
         break;
-      case "3":
+      case '3':
         billingPrice = 21200;
         break;
-      case "5":
+      case '5':
         billingPrice = 33500;
         break;
       default:
@@ -104,32 +104,32 @@ const PlanCard = ({
   }
 
   switch (billingPeriod) {
-    case "day":
-      billingText = "/ Día";
+    case 'day':
+      billingText = '/ Día';
       break;
-    case "month":
-      billingText = "/ Mes";
+    case 'month':
+      billingText = '/ Mes';
       break;
-    case "hour":
-      billingText = "/ Hora";
+    case 'hour':
+      billingText = '/ Hora';
       break;
     default:
-      billingText = "";
+      billingText = '';
   }
   return (
-    <div className="mx-2 px-6 py-4 transition-colors duration-200 transform rounded-md border tracking-tight h-64 lg:h-[18rem] xl:h-[16rem] flex justify-between flex-col">
-      <p className="text-lg font-medium text-darkness">{title}</p>
-      <h4 className="text-4xl font-semibold text-gray-800 opacity-90">
-        <span className="text-oldGold">$</span>
-        {billingPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
+    <div className='mx-2 px-6 py-4 transition-colors duration-200 transform rounded-md border tracking-tight h-64 lg:h-[18rem] xl:h-[16rem] flex justify-between flex-col'>
+      <p className='text-lg font-medium text-darkness'>{title}</p>
+      <h4 className='text-4xl font-semibold text-gray-800 opacity-90'>
+        <span className='text-oldGold'>$</span>
+        {billingPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')}
 
-        <span className="text-base font-normal text-gray-400">
+        <span className='text-base font-normal text-gray-400'>
           {billingText}
         </span>
       </h4>
-      <p className="text-gray-800 font-medium opacity-80">{description}</p>
-      <Link to="contacto" spy={true} smooth={true} duration={100}>
-        <button className="w-full tracking-tight px-4 py-2 font-medium text-darkness capitalize transition-colors duration-200 transform bg-oldGold rounded-md hover:bg-[#cca712] focus:outline-none">
+      <p className='text-gray-800 font-medium opacity-80'>{description}</p>
+      <Link to='contacto' spy={true} smooth={true} duration={100}>
+        <button className='w-full tracking-tight px-4 py-2 font-medium text-darkness capitalize transition-colors duration-200 transform bg-oldGold rounded-md hover:bg-[#cca712] focus:outline-none'>
           Reservar
         </button>
       </Link>
@@ -139,18 +139,18 @@ const PlanCard = ({
 
 const CustomButtonGroupAsArrows = ({ next, previous }) => {
   return (
-    <div className="md:mt-0 absolute top-[-34px] right-1">
-      <button className="text-3xl mr-2 hover:opacity-70" onClick={previous}>
+    <div className='md:mt-0 absolute top-[-34px] right-1'>
+      <button className='text-3xl mr-2 hover:opacity-70' onClick={previous}>
         <IoIosArrowRoundBack />
       </button>
-      <button className="text-3xl hover:opacity-70" onClick={next}>
+      <button className='text-3xl hover:opacity-70' onClick={next}>
         <IoIosArrowRoundForward />
       </button>
     </div>
   );
 };
 const Plans = () => {
-  const [amountOfDays, setAmountOfDays] = useState("5");
+  const [amountOfDays, setAmountOfDays] = useState('5');
 
   const responsive = {
     desktop: {
@@ -175,27 +175,27 @@ const Plans = () => {
   };
 
   return (
-    <section id="planes" className="bg-white pb-14 ">
-      <div className="container px-6 py-10 mx-auto">
-        <div className="sm:flex sm:items-center sm:justify-between">
+    <section id='planes' className='bg-white pb-14 '>
+      <div className='container px-6 py-10 mx-auto'>
+        <div className='sm:flex sm:items-center sm:justify-between'>
           <div>
-            <h2 className="text-3xl font-bold lg:text-4xl text-darkness">
+            <h2 className='text-3xl font-bold lg:text-4xl text-darkness'>
               Nuestros planes
             </h2>
-            <p className="mt-4 text-gray-800 text-lg opacity-80">
+            <p className='mt-4 text-gray-800 text-lg opacity-80'>
               Accedé a cada uno de nuestros servicios a través de los planes que
               Workbox te ofrece.
             </p>
           </div>
         </div>
-        <div className="max-w-2xl p-1.5 mt-10 mb-12 md:mb-0 mx-auto overflow-hidden bg-gray-100 rounded-lg dark:bg-gray-800">
-          <div className="grid gap-3 grid-cols-3">
+        <div className='max-w-2xl p-1.5 mt-10 mb-12 md:mb-0 mx-auto overflow-hidden bg-gray-100 rounded-lg'>
+          <div className='grid gap-3 grid-cols-3'>
             <button
               onClick={selectDaysHandler}
               value={2}
               className={
-                "px-3 py-2 font-medium bg-transparent text-gray-800 uppercase transition-colors duration-300 transform rounded-lg focus:outline-none dark:text-gray-200 dark:hover:bg-gray-600 hover:bg-gray-200" +
-                (amountOfDays === "2" ? " bg-gray-200" : "")
+                'px-3 py-2 font-medium bg-transparent text-gray-800 uppercase transition-colors duration-300 transform rounded-lg focus:outline-none hover:bg-gray-200' +
+                (amountOfDays === '2' ? ' bg-gray-200' : '')
               }
             >
               2 días
@@ -205,8 +205,8 @@ const Plans = () => {
               onClick={selectDaysHandler}
               value={3}
               className={
-                "px-3 py-2 font-medium bg-transparent text-gray-800 uppercase transition-colors duration-300 transform rounded-lg focus:outline-none dark:text-gray-200 dark:hover:bg-gray-600 hover:bg-gray-200" +
-                (amountOfDays === "3" ? " bg-gray-200" : "")
+                'px-3 py-2 font-medium bg-transparent text-gray-800 uppercase transition-colors duration-300 transform rounded-lg focus:outline-none hover:bg-gray-200' +
+                (amountOfDays === '3' ? ' bg-gray-200' : '')
               }
             >
               3 días
@@ -216,28 +216,28 @@ const Plans = () => {
               onClick={selectDaysHandler}
               value={5}
               className={
-                "px-3 py-2 font-medium bg-transparent text-gray-800 uppercase transition-colors duration-300 transform rounded-lg focus:outline-none dark:text-gray-200 dark:hover:bg-gray-600 hover:bg-gray-200" +
-                (amountOfDays === "5" ? " bg-gray-200" : "")
+                'px-3 py-2 font-medium bg-transparent text-gray-800 uppercase transition-colors duration-300 transform rounded-lg focus:outline-none hover:bg-gray-200' +
+                (amountOfDays === '5' ? ' bg-gray-200' : '')
               }
             >
               5 días
             </button>
           </div>
         </div>
-        <div className="relative mt-10">
+        <div className='relative mt-10'>
           <Carousel
             additionalTransfrom={0}
             arrows={false}
             autoPlaySpeed={3000}
             centerMode={false}
-            className=""
-            containerClass="in"
+            className=''
+            containerClass='in'
             customButtonGroup={<CustomButtonGroupAsArrows />}
-            dotListClass=""
+            dotListClass=''
             draggable
             focusOnSelect={false}
             infinite={false}
-            itemClass=""
+            itemClass=''
             keyBoardControl
             minimumTouchDrag={80}
             pauseOnHover
@@ -250,7 +250,7 @@ const Plans = () => {
             rtl={false}
             shouldResetAutoplay
             showDots={false}
-            sliderClass=""
+            sliderClass=''
             slidesToSlide={1}
             swipeable
           >
@@ -268,11 +268,11 @@ const Plans = () => {
           </Carousel>
         </div>
 
-        <div className="border text-center rounded-md flex flex-col mt-10 p-6 items-center justify-content-center">
-          <h3 className="font-semibold text-2xl text-darkness mb-3">
+        <div className='border text-center rounded-md flex flex-col mt-10 p-6 items-center justify-content-center'>
+          <h3 className='font-semibold text-2xl text-darkness mb-3'>
             Todas nuestras membresías incluyen
           </h3>
-          <p className="text-darkness text-lg">
+          <p className='text-darkness text-lg'>
             Internet de alta velocidad - Cocina equipada - Coffe break - Locker
             propio - Mobiliario ergónomico - Servicio de impresión
           </p>
