@@ -28,7 +28,7 @@ const PLANS = [
   },
   {
     id: 3,
-    title: 'Pase Mensual',
+    title: 'Pase mensual',
     tag: 'open-space',
     tagIcon: 'clock',
     billingPeriod: 'Mes',
@@ -125,18 +125,10 @@ const FeatureCard = ({
   };
 
   return (
-    <div className='max-w-sm mx-auto border rounded-lg'>
+    <div className='max-w-md border rounded-lg'>
       <div className='p-6'>
-        <div className='flex items-center'>
-          {tagIcon && (
-            <span className='font-bold text-oldGold'>
-              {getTagIcon({ tagIcon })}
-            </span>
-          )}
-          <h1 className='text-xl font-medium text-gray-700 capitalize'>
-            {title}
-          </h1>
-        </div>
+        <h1 className='text-2xl font-medium text-gray-700'>{title}</h1>
+
         <h4 className='text-4xl font-semibold text-gray-800 opacity-90 mt-6'>
           <span className='text-oldGold'>$</span>
           {price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')}
@@ -190,56 +182,6 @@ const FeatureCard = ({
   );
 };
 
-const ImageCard = ({
-  title,
-  imageURL,
-  tag,
-  capacity,
-  tagIcon,
-  billingPeriod,
-  price,
-  description,
-  priceLabel,
-}) => {
-  return (
-    <div className='w-full max-w-sm mx-auto overflow-hidden bg-white rounded-lg shadow-lg'>
-      <img
-        className='object-cover object-center w-full h-56'
-        src={imageURL}
-        alt='avatar'
-      />
-
-      <div className='flex items-center px-6 py-3 bg-gray-900'>
-        <PeopleIcon />
-
-        <h1 className='mx-3 text-lg font-semibold text-white'>{capacity}</h1>
-      </div>
-
-      <div className='px-6 py-4'>
-        <h1 className='text-xl font-semibold text-gray-800'>{title}</h1>
-
-        <p className='py-2 text-gray-700 mb-8'>{description}</p>
-
-        {priceLabel && <span className='text-oldGold'>{priceLabel}</span>}
-        <h4 className='text-4xl font-semibold text-gray-800 opacity-90 mt-0'>
-          <span className='text-oldGold'>$</span>
-          {price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')}
-
-          <span className='text-base font-normal text-gray-400'>
-            {`/${billingPeriod}`}
-          </span>
-        </h4>
-
-        <Link to='contacto' spy={true} smooth={true} duration={100}>
-          <button className='mt-8 w-full tracking-tight px-4 py-2 font-medium text-darkness capitalize transition-colors duration-200 transform bg-oldGold rounded-md hover:bg-[#cca712] focus:outline-none'>
-            Reservar
-          </button>
-        </Link>
-      </div>
-    </div>
-  );
-};
-
 const PlansV2 = () => {
   const openSpacePlans = PLANS.filter(({ tag }) => tag === 'open-space');
   return (
@@ -256,7 +198,7 @@ const PlansV2 = () => {
           </div>
         </div>
 
-        <div className='grid gap-6 mt-16 -mx-6 sm:gap-8 sm:grid-cols-2 px-6'>
+        <div className='flex mt-16 justify-between'>
           {openSpacePlans.map((plan, index) => (
             <FeatureCard {...plan} key={index} />
           ))}

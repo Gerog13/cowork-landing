@@ -137,16 +137,6 @@ const Offices = () => {
             <ImageCard {...plan} key={index} />
           ))}
         </div>
-
-        <div className='border text-center rounded-md flex flex-col mt-10 p-6 items-center justify-content-center'>
-          <h3 className='font-semibold text-2xl text-darkness mb-3'>
-            Incluido en todos nuestros planes
-          </h3>
-          <p className='text-darkness text-lg'>
-            Internet de alta velocidad - Cocina equipada - Coffe break - Locker
-            propio - Mobiliario ergónomico - Servicio de impresión
-          </p>
-        </div>
       </div>
     </section>
   );

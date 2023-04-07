@@ -18,11 +18,10 @@ const Services = () => {
           </h2>
 
           <p className='mt-4 text-gray-800 text-lg opacity-80 xl:mt-6'>
-            Además de todos los beneficios que Workbox ofrece debido a su
-            localización tales como: amplio estacionamiento, patio de comidas,
-            supermercado, farmacia, cajeros, gimnasio, seguridad todo el día,
-            fácil acceso y todo tipo de negocios alrededor, contamos con los
-            siguientes servicios.
+            Workbox ofrece servicios en una ubicación privilegiada con
+            estacionamiento, acceso fácil y variedad de negocios. Disfruta de
+            patio de comidas, supermercado, farmacia, cajeros, gimnasio y
+            seguridad 24/7.
           </p>
 
           <div className='grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-16 md:grid-cols-2 xl:grid-cols-3'>

@@ -7,6 +7,7 @@ import { Main, Footer, Services, Contact, Plans } from './container';
 import MetaTags from 'react-meta-tags';
 import PlansV2 from './container/Plans/PlansV2';
 import Offices from './container/Offices/Offices';
+import VirtualOffice from './container/VirtualOffice/VirtualOffice';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
       <Services />
       <PlansV2 />
       <Offices />
+      <VirtualOffice />
       <Contact />
       <Footer />
     </div>
