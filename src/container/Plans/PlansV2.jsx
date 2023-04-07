@@ -242,17 +242,16 @@ const ImageCard = ({
 
 const PlansV2 = () => {
   const openSpacePlans = PLANS.filter(({ tag }) => tag === 'open-space');
-  const officesPlans = PLANS.filter(({ tag }) => tag === 'office');
   return (
     <section id='planes' className='bg-white pb-14'>
       <div className='container px-6 py-8 mx-auto'>
         <div className='sm:flex sm:items-center sm:justify-between'>
           <div>
             <h2 className='text-3xl font-bold lg:text-4xl text-darkness'>
-              Elige tu pase ideal en Workbox
+              Elegí tu pase ideal en Workbox
             </h2>
             <p className='mt-4 text-gray-800 text-lg opacity-80'>
-              Descubre nuestras opciones de pases diarios y mensuales
+              Descubrí nuestras opciones de pases diarios y mensuales
             </p>
           </div>
         </div>
@@ -261,25 +260,6 @@ const PlansV2 = () => {
           {openSpacePlans.map((plan, index) => (
             <FeatureCard {...plan} key={index} />
           ))}
-        </div>
-
-        <h2 className='text-2xl font-bold lg:text-3xl text-darkness mt-16'>
-          Oficinas
-        </h2>
-        <div className='grid gap-6 mt-16 -mx-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3 px-6'>
-          {officesPlans.map((plan, index) => (
-            <ImageCard {...plan} key={index} />
-          ))}
-        </div>
-
-        <div className='border text-center rounded-md flex flex-col mt-10 p-6 items-center justify-content-center'>
-          <h3 className='font-semibold text-2xl text-darkness mb-3'>
-            Todas nuestras membresías incluyen
-          </h3>
-          <p className='text-darkness text-lg'>
-            Internet de alta velocidad - Cocina equipada - Coffe break - Locker
-            propio - Mobiliario ergónomico - Servicio de impresión
-          </p>
         </div>
       </div>
     </section>

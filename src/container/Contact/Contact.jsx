@@ -41,15 +41,14 @@ export default function App() {
   };
 
   return (
-    <section className='bg-gray-100' id='contacto'>
+    <section className='bg-white' id='contacto'>
       <div className='container px-6 py-14 mx-auto'>
         <div className='lg:flex lg:items-center lg:-mx-6'>
           <div className='lg:w-1/2 lg:mx-6'>
             <div className='flex flex-col items-start'>
               <h1 className='text-3xl font-semibold text-black apitalize lg:text-4xl xl:text-[3.5rem]'>
-                Sé parte de
+                Sé parte de Workbox
               </h1>
-              <WorkboxLogo className='inline-block max-h-8' />
             </div>
 
             <div className='mt-6 md:mt-8 lg:mt-10 space-y-4 md:space-y-6 lg:space-y-8'>

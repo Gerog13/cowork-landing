@@ -6,6 +6,7 @@ import Logo from '../src/assets/images/logo-r.png';
 import { Main, Footer, Services, Contact, Plans } from './container';
 import MetaTags from 'react-meta-tags';
 import PlansV2 from './container/Plans/PlansV2';
+import Offices from './container/Offices/Offices';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
       <Main />
       <Services />
       <PlansV2 />
+      <Offices />
       <Contact />
       <Footer />
     </div>
