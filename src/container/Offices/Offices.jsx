@@ -73,8 +73,8 @@ const Offices = () => {
         </div>
 
         <div className='grid gap-6 mt-16 -mx-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3 px-6'>
-          {offices.map((office, index) => (
-            <OfficeCard {...office} key={index} />
+          {offices.map((office) => (
+            <OfficeCard {...office} key={`office-card-${office.id}`} />
           ))}
         </div>
       </div>

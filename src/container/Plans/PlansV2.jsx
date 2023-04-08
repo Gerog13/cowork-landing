@@ -4,6 +4,7 @@ import { Link } from 'react-scroll';
 import 'react-multi-carousel/lib/styles.css';
 
 import PRICES from '../../data/prices';
+import CheckIcon from '../../components/Icons/CheckIcon';
 
 const FeatureCard = ({ name, price, description, billingPeriod, features }) => {
   return (
@@ -32,21 +33,10 @@ const FeatureCard = ({ name, price, description, billingPeriod, features }) => {
 
         <div className='mt-8 space-y-4'>
           {features &&
-            features.map((feature) => (
-              <div className='flex items-center'>
-                <span className='h5'>
-                  <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    className='w-5 h-5 text-oldGold'
-                    viewBox='0 0 20 20'
-                    fill='currentColor'
-                  >
-                    <path
-                      fill-rule='evenodd'
-                      d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z'
-                      clip-rule='evenodd'
-                    />
-                  </svg>
+            features.map((feature, index) => (
+              <div key={index} className='flex items-center'>
+                <span className='text-oldGold'>
+                  <CheckIcon />
                 </span>
 
                 <span className='ml-4 text-gray-700'>{feature}</span>
@@ -81,8 +71,8 @@ const PlansV2 = () => {
         </div>
 
         <div className='flex mt-16 justify-between'>
-          {openSpacePlans.map((plan, index) => (
-            <FeatureCard {...plan} key={index} />
+          {openSpacePlans.map((plan) => (
+            <FeatureCard {...plan} key={`feature-card-${plan.id}`} />
           ))}
         </div>
       </div>
