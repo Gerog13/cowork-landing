@@ -1,13 +1,8 @@
 import { Link } from 'react-scroll';
+import PRICES from '../../data/prices';
 
 const VirtualOffice = () => {
-  const virtualOffice = {
-    title: 'Oficina Virtual',
-    description:
-      'Brindamos domicilio comercial, gestión de correspondencia y atención telefónica o virtual por e-mail para tus clientes.',
-    price: 2900,
-    billingPeriod: 'Mes',
-  };
+  const virtualOffice = PRICES.find(({ type }) => type === 'virtual-office');
   return (
     <section id='oficinaVirtual' className='bg-white pb-14'>
       <div className='container px-6 py-8 mx-auto'>

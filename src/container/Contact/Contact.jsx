@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
-import WorkboxLogo from '../../components/workboxLogo';
 import { EnvelopIcon, LocationIcon, PhoneIcon } from '../../components/Icons';
 
 export default function App() {

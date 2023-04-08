@@ -3,11 +3,16 @@ import ScrollToTop from 'react-scroll-to-top';
 import arrow from './assets/images/arrow.svg';
 import Logo from '../src/assets/images/logo-r.png';
 
-import { Main, Footer, Services, Contact, Plans } from './container';
+import {
+  Main,
+  Footer,
+  Services,
+  Contact,
+  PlansV2,
+  Offices,
+  VirtualOffice,
+} from './container';
 import MetaTags from 'react-meta-tags';
-import PlansV2 from './container/Plans/PlansV2';
-import Offices from './container/Offices/Offices';
-import VirtualOffice from './container/VirtualOffice/VirtualOffice';
 
 function App() {
   return (
