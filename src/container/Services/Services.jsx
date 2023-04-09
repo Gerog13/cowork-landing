@@ -128,9 +128,10 @@ const Services = () => {
           </h2>
 
           <p className='block max-w-2xl mt-4 text-xl text-gray-800 opacity-90'>
-            Workbox brinda la oportunidad de organizar una amplia gama de
-            eventos, desde seminarios y encuentros corporativos hasta
-            conferencias y otros eventos destacados.
+            Descubrí cómo nuestro espacio de coworking se adapta a tus
+            necesidades para celebrar eventos únicos, desde talleres y charlas
+            hasta encuentros empresariales y presentaciones. ¡Convertí a Workbox
+            en el escenario perfecto para tu próximo evento!
           </p>
 
           <div className='mt-6'>

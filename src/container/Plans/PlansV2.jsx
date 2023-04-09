@@ -70,7 +70,7 @@ const PlansV2 = () => {
           </div>
         </div>
 
-        <div className='flex mt-16 justify-between'>
+        <div className='grid gap-6 mt-16 -mx-6 sm:gap-8 sm:grid-cols-2 xl:grid-cols-3 px-6'>
           {openSpacePlans.map((plan) => (
             <FeatureCard {...plan} key={`feature-card-${plan.id}`} />
           ))}
