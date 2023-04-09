@@ -93,6 +93,15 @@ const Mainui = () => {
                     </Link>
                     <Link
                       className='block cursor-pointer font-medium border-b border-transparent hover:border-b hover:border-gray-900 text-gray-900 transition-all ease duration-150'
+                      to='oficinas'
+                      spy={true}
+                      smooth={true}
+                      duration={100}
+                    >
+                      Oficinas
+                    </Link>
+                    <Link
+                      className='block cursor-pointer font-medium border-b border-transparent hover:border-b hover:border-gray-900 text-gray-900 transition-all ease duration-150'
                       to='contacto'
                       spy={true}
                       smooth={true}
@@ -107,7 +116,7 @@ const Mainui = () => {
                       smooth={true}
                       duration={100}
                     >
-                      Reservar lugar
+                      Reservar
                     </Link>
                   </div>
                 </nav>
