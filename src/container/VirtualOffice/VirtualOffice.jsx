@@ -11,7 +11,7 @@ const VirtualOffice = () => {
             Impulsa tu negocio con nuestra Oficina Virtual
           </h2>
           <p className='mt-4 mb-16 text-gray-800 text-lg opacity-80'>
-            Simplificá tus operaciones comerciales y fortalece tu presencia
+            Simplificá tus operaciones comerciales y fortalecé tu presencia
             empresarial con nuestro completo servicio de oficina virtual.
           </p>
           <div className='max-w-md border rounded-lg'>

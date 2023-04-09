@@ -19,7 +19,7 @@ const Services = () => {
 
           <p className='mt-4 text-gray-800 text-lg opacity-80 xl:mt-6'>
             Workbox ofrece servicios en una ubicación privilegiada con
-            estacionamiento, acceso fácil y variedad de negocios. Disfruta de
+            estacionamiento, fácil acceso y variedad de negocios. Disfrutá de
             patio de comidas, supermercado, farmacia, cajeros, gimnasio y
             seguridad 24/7.
           </p>
@@ -35,8 +35,8 @@ const Services = () => {
               </p>
 
               <p className='text-gray-800'>
-                Con nuestro wifi de alta velocidad, navegá y trabajá sin
-                limitaciones ni interrupciones.
+                Conexión alta velocidad, navegá y trabajá sin limitaciones ni
+                interrupciones.
               </p>
             </div>
 
@@ -50,8 +50,8 @@ const Services = () => {
               </p>
 
               <p className='text-gray-800'>
-                Nuestros lockers te van a permitir guardar tus objetos de valor
-                de forma segura.
+                Nuestros casilleros te proporcionan un espacio seguro para
+                almacenar tus pertenencias.
               </p>
             </div>
 
@@ -61,12 +61,11 @@ const Services = () => {
               </span>
 
               <p className='text-2xl font-semibold text-darkness'>
-                Coffe break
+                Coffee break
               </p>
 
               <p className='text-gray-800'>
-                Dispone de té, cafe, mate y todo tipo de infusiones con tu
-                membresía.
+                Disfrutá de té, café, mate y variedad de bebidas.
               </p>
             </div>
 
@@ -80,8 +79,8 @@ const Services = () => {
               </p>
 
               <p className='text-gray-800'>
-                ¿Querés enviar tu correspondencia al cowork? ¡Tranquilo,
-                nosotros la recibimos!
+                Enviá tu correspondencia a Workbox, nosotros la recibimos por
+                vos!
               </p>
             </div>
 
@@ -95,8 +94,8 @@ const Services = () => {
               </p>
 
               <p className='text-gray-800'>
-                Sentite cómodo en todo momento con nuestros muebles ergónomicos
-                de alta calidad.
+                Experimentá el confort con nuestro mobiliario ergonómico y de
+                calidad superior.
               </p>
             </div>
 
@@ -106,12 +105,12 @@ const Services = () => {
               </span>
 
               <p className='text-2xl font-semibold text-darkness'>
-                Sala de reuniones
+                Salas de reuniones
               </p>
 
               <p className='text-gray-800'>
-                Organizá reuniones con tu equipo de forma privada y hacé crecer
-                tu empresa/emprendimiento.
+                Salas de reuniones para 4, 6 o 16 personas, ideales para
+                cualquier tipo de encuentro y colaboración.
               </p>
             </div>
           </div>

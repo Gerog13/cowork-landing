@@ -208,9 +208,9 @@ const Mainui = () => {
                   <WorkboxLogo className='max-w-[60%] lg:max-w-[70%]' />
                 </div>
                 <p className='mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0'>
-                  Somos un espacio de conexión, pensado para que puedas
-                  desarrollar todas tus actividades en un cowork a la medida de
-                  tus necesidades.
+                  Somos un espacio de conexión, diseñado para fomentar la
+                  colaboración y el crecimiento, proporcionando un ambiente
+                  óptimo y adaptado a tus necesidades laborales.
                 </p>
                 <div className='mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start'>
                   <div className='rounded-md shadow'>
@@ -238,7 +238,8 @@ const Mainui = () => {
         </div>
       </main>
       <div className='w-full min-h-[10rem] tracking-tight text-md px-6 sm:px-4 md:px-0 sm:text-lg md:text-2xl font-semibold flex items-center justify-center text-darkness bg-oldGold'>
-        El espacio de trabajo que necesitas, cuándo y dónde lo necesitás.
+        Empezá a trabajar en Workbox y llevá tu productividad al siguiente
+        nivel.
       </div>
     </>
   );
