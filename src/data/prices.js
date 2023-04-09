@@ -39,7 +39,7 @@ const PRICES = [
     billingPeriod: 'Mes',
     price: 29000,
     description:
-      'Espacio de trabajo exclusivo mensual para 2 personas, con escritorios dedicados y mobiliario ergonómico.',
+      'Espacio de trabajo exclusivo mensual para 2 personas, con escritorios fijos y mobiliario ergonómico.',
     features: [
       'Espacio para 2 personas',
       'Uso exclusivo y fijo',
