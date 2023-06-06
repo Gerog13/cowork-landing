@@ -37,7 +37,7 @@ const PRICES = [
     type: 'office',
     capacity: '2 personas',
     billingPeriod: 'Mes',
-    price: 29000,
+    price: 35000,
     description:
       'Espacio de trabajo exclusivo mensual para 2 personas, con escritorios fijos y mobiliario ergonómico.',
     features: [
