@@ -4,7 +4,7 @@ const PRICES = [
     name: 'Pase por el día',
     type: 'open-space',
     billingPeriod: 'Día',
-    price: 3700,
+    price: 4800,
     description:
       'Disfrutá de una jornada laboral completa, aprovechando todos los beneficios que Workbox brinda.',
     features: [
@@ -19,7 +19,7 @@ const PRICES = [
     name: 'Pase mensual',
     type: 'open-space',
     billingPeriod: 'Mes',
-    price: 25000,
+    price: 32500,
     description:
       'Acceso ilimitado en horario de atención para coworkers que desean aprovechar al máximo nuestras instalaciones.',
     features: [
@@ -37,7 +37,7 @@ const PRICES = [
     type: 'office',
     capacity: '2 personas',
     billingPeriod: 'Mes',
-    price: 35000,
+    price: 45500,
     description:
       'Espacio de trabajo exclusivo mensual para 2 personas, con escritorios fijos y mobiliario ergonómico.',
     features: [
@@ -56,7 +56,7 @@ const PRICES = [
     capacity: 'de 4 a 6 personas',
     billingPeriod: 'Mes',
     priceLabel: 'desde',
-    price: 97000,
+    price: 139000,
     description:
       'Oficinas privadas para 4 o 6 personas, con ambiente cómodo, equipamiento ergonómico y espacio colaborativo.',
   },
@@ -68,7 +68,7 @@ const PRICES = [
     capacity: 'de 4 a 16 personas',
     billingPeriod: 'Hora',
     priceLabel: 'desde',
-    price: 3000,
+    price: 7000,
     description:
       'Organiza reuniones en espacios privados para 4, 6 o 16 personas, con comodidad y equipamiento adecuado.',
   },
@@ -78,7 +78,7 @@ const PRICES = [
     type: 'virtual-office',
     description:
       'Brindamos domicilio comercial, gestión de correspondencia y atención telefónica o virtual por e-mail para tus clientes.',
-    price: 3500,
+    price: 4500,
     billingPeriod: 'Mes',
   },
 ];
