@@ -20,7 +20,7 @@ const VirtualOffice = () => {
                 {virtualOffice.title}
               </h1>
 
-              <h4 className='text-4xl font-semibold text-gray-800 opacity-90 mt-6'>
+              {/* <h4 className='text-4xl font-semibold text-gray-800 opacity-90 mt-6'>
                 <span className='text-oldGold'>$</span>
                 {virtualOffice.price
                   .toString()
@@ -29,7 +29,7 @@ const VirtualOffice = () => {
                 <span className='text-base font-normal text-gray-400'>
                   {`/${virtualOffice.billingPeriod}`}
                 </span>
-              </h4>
+              </h4> */}
 
               <p className='mt-4 text-gray-500'>{virtualOffice.description}</p>
             </div>

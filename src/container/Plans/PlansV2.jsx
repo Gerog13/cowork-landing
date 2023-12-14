@@ -12,14 +12,14 @@ const FeatureCard = ({ name, price, description, billingPeriod, features }) => {
       <div className='p-6'>
         <h1 className='text-2xl font-bold text-gray-700'>{name}</h1>
 
-        <h4 className='text-4xl font-semibold text-gray-800 opacity-90 mt-6'>
+        {/* <h4 className='text-4xl font-semibold text-gray-800 opacity-90 mt-6'>
           <span className='text-oldGold'>$</span>
           {price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')}
 
           <span className='text-base font-normal text-gray-400'>
             {`/${billingPeriod}`}
           </span>
-        </h4>
+        </h4> */}
 
         <p className='mt-4 text-gray-500'>{description}</p>
       </div>

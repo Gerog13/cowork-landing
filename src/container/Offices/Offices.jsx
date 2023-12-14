@@ -31,7 +31,7 @@ const OfficeCard = ({
         <h1 className='text-xl font-semibold text-gray-800'>{name}</h1>
 
         <p className='py-2 text-gray-700 mb-8 flex-grow'>{description}</p>
-        <div className='flex flex-col min-h-16 justify-end'>
+        {/* <div className='flex flex-col min-h-16 justify-end'>
           {priceLabel && <span className='text-oldGold'>{priceLabel}</span>}
 
           <h4 className='text-4xl font-semibold text-gray-800 opacity-90 mt-0'>
@@ -42,7 +42,7 @@ const OfficeCard = ({
               {`/${billingPeriod}`}
             </span>
           </h4>
-        </div>
+        </div> */}
 
         <Link to='contacto' spy={true} smooth={true} duration={100}>
           <button className='mt-8 w-full tracking-tight px-4 py-2 font-medium text-darkness capitalize transition-colors duration-200 transform bg-oldGold rounded-md hover:bg-[#cca712] focus:outline-none'>

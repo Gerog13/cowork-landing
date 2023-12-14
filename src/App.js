@@ -13,6 +13,7 @@ import {
   VirtualOffice,
 } from './container';
 import MetaTags from 'react-meta-tags';
+import Matterport from './container/Matterport/Matterport';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
         smooth
       />
       <Main />
+      <Matterport />
       <Services />
       <PlansV2 />
       <Offices />
