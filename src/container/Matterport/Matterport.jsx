@@ -17,7 +17,7 @@ const Matterport = () => {
             >
               Roomica
             </a>
-            ."
+            .
           </p>
         </div>
       </div>
